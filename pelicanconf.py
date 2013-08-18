@@ -22,8 +22,7 @@ TRANSLATION_FEED_ATOM = None
 #          ('You can modify those links in your config file', '#'),)
 
 # Social widget
-#SOCIAL = (('You can add links in your config file', '#'),
-#          ('Another social link', '#'),)
+SOCIAL = (('<b>@wdtz</b>', 'http://twitter.com/wdtz'),)
 
 DEFAULT_PAGINATION = False
 
