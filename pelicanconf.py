@@ -35,7 +35,7 @@ USE_FOLDER_AS_CATEGORY = True
 # THEME = "tuxlite_tbs"
 
 # Typographic improvements
-TYPOGRIFY = True
+# TYPOGRIFY = True
 
 TWITTER_USERNAME = "wdtz"
 GOOGLE_ANALYTICS = "UA-2939626-5"
