@@ -1,10 +1,14 @@
-About
-######
+Will
+####
 
 :date: 2013-08-18
 
 
 
+:category: About
+
+Bio
+===
 I'm currently a Ph.D candidate at UIUC_, studying `Computer Science`_ under `Vikram Adve`_ with high-level interests of Compilers and Systems.
 
 My research interests include:
@@ -17,17 +21,25 @@ My research interests include:
 * Virtualization Technologies
 * Program Analysis (esp C/C++)
 
-
-
-.. _UIUC: http://illinois.edu
-.. _Computer Science: http://cs.uiuc.edu
-.. _Vikram Adve: http://llvm.cs.illinois.edu/~vadve
+(In no particular order)
 
 Contact
 =======
 
 You can reach me:
 
-IRC/AIM: **dtzWill**
-Email: wdietz2@uiuc.edu
+IRC
+  dtzWill (various networks)
+Twitter
+  http://twitter.com/wdtz
+G+
+  http://wdtz.org/+
+Email
+  wdietz2@uiuc.edu
+
+.. _UIUC: http://illinois.edu
+.. _Computer Science: http://cs.uiuc.edu
+.. _Vikram Adve: http://llvm.cs.illinois.edu/~vadve
+
+
 
