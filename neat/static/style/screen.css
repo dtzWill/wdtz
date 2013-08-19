@@ -94,6 +94,12 @@ header .logo {
     font-weight: bold;
 }
 
+header .tagline {
+    color: #333;
+    font-size: 16px;
+    text-shadow: 1px 1px 0 #fff;
+}
+
 article > header.float {
     background: none repeat scroll 0 0 #fff;
     box-sizing: border-box;
@@ -120,7 +126,7 @@ article > header.float {
     padding: 10px 0;
 }
 
-.splash .welcome {
+.splash .categories {
     color: #333;
     font-size: 16px;
     text-shadow: 1px 1px 0 #fff;

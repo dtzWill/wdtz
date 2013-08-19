@@ -26,12 +26,19 @@
             <div class="logo">
                 <a href="index.html" title="Home">{{ SITENAME }}</a>
             </div>
+            <div class="tagline">
+              {{ SITE_TAGLINE }}
+            </div>
         </div>
     </header>
 
     <div class="splash">
         <div class="container">
-            <div class="welcome">{{ SITE_TAGLINE }}</div>
+          <div class="categories">
+          {% for cat, null in categories %}
+            <b><a href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a></b>&nbsp;
+          {% endfor %}
+          </div>
         </div>
     </div>
 

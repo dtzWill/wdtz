@@ -5,6 +5,7 @@ from __future__ import unicode_literals
 AUTHOR = 'Will Dietz'
 SITENAME = "wdtz / Will Dietz"
 #SITEURL = 'http://wdtz.org'
+SITE_TAGLINE = "Where There's a Will There's a Way"
 
 TIMEZONE = 'America/Chicago'
 
