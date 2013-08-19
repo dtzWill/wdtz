@@ -14,7 +14,10 @@ New Executable Software of Unknown Provenance.
 Our project is utilizing LLVM and its `Secure Virtual Architecture`_, coupled with
 information flow analysis, dynamic rewriting, and compiler verification.
 
-More information is available at the `Chili Homepage`_
+Related
+-------
+
+More information is available at the `Chili Homepage`_.
 
 References
 ----------
