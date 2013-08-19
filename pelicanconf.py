@@ -14,6 +14,8 @@ DEFAULT_LANG = 'en'
 FEED_ALL_ATOM = None
 CATEGORY_FEED_ATOM = None
 TRANSLATION_FEED_ATOM = None
+FEED_ATOM = None
+FEED_RSS = None
 
 # Blogroll
 #LINKS =  (('Pelican', 'http://getpelican.com/'),
