@@ -14,11 +14,8 @@ Terminal Emulator for WebOS, distributed via Preware_.
 Screenshots
 -----------
 
-.. image:: https://raw.github.com/RyanHope/wTerm/master/screenshots/htop.png
-   :alt: htop in wterm
-
-.. image:: https://raw.github.com/RyanHope/wTerm/master/screenshots/exhibition.png
-   :alt: cmatrix as Touchpad exhibition
+|htop|
+|exhibition|
 
 References
 ----------
@@ -27,3 +24,12 @@ References
 
 .. _Preware: http://preware.org
 .. _GitHub: https://github.com/RyanHope/wTerm
+
+.. |htop| image:: https://raw.github.com/RyanHope/wTerm/master/screenshots/htop.png
+   :width: 300px
+   :alt: htop in wterm
+   :target: https://raw.github.com/RyanHope/wTerm/master/screenshots/htop.png
+.. |exhibition| image:: https://raw.github.com/RyanHope/wTerm/master/screenshots/exhibition.png
+   :width: 300px
+   :alt: cmatrix as Touchpad exhibition
+   :target: https://raw.github.com/RyanHope/wTerm/master/screenshots/exhibition.png
