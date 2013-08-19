@@ -36,7 +36,13 @@ RELATIVE_URLS = True
 
 USE_FOLDER_AS_CATEGORY = True
 
-# THEME = "tuxlite_tbs"
+# THEME = "/home/will/pelican-themes/neat/neat"
+# THEME = "/home/will/pelican-themes/water-iris"
+# THEME = "/home/will/pelican-themes/iris"
+# THEME = "/home/will/pelican-themes/sundown"
+THEME = "/home/will/pelican-themes/pelican-cait"
+# THEME = "/home/will/pelican-themes/Just-Read"
+# THEME = "/home/will/pelican-themes/notmyidea-cms"
 
 # Typographic improvements
 # TYPOGRIFY = True
