@@ -68,9 +68,9 @@
 			<div class="nav-collapse collapse navbar-responsive-collapse">
 				<ul class="nav">
 				{% if DISPLAY_PAGES_ON_MENU %}
-				{% for page in PAGES %}
-					<li>
-						<a href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a>
+				{% for p in PAGES %}
+					<li {% if p == page %}class="active"{% endif %}>
+						<a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a>
 					</li>
 					<li class="divider-vertical"></li>
 				{% endfor %}
