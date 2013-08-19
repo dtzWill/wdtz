@@ -24,10 +24,10 @@ FEED_RSS = None
 #          ('You can modify those links in your config file', '#'),)
 
 # Social widget
-SOCIAL = (
-    ('twitter', 'http://twitter.com/wdtz'),
-    ('github', 'http://github.com/dtzWill'),
-    ('##uiuc on Freenode', 'http://webchat.freenode.net/?channels=##uiuc'),)
+# SOCIAL = (
+#     ('twitter', 'http://twitter.com/wdtz'),
+#     ('github', 'http://github.com/dtzWill'),
+#     ('##uiuc on Freenode', 'http://webchat.freenode.net/?channels=##uiuc'),)
 
 DEFAULT_PAGINATION = False
 
@@ -36,16 +36,15 @@ RELATIVE_URLS = True
 
 USE_FOLDER_AS_CATEGORY = True
 
-# THEME = "/home/will/pelican-themes/neat/neat"
-# THEME = "/home/will/pelican-themes/water-iris"
-# THEME = "/home/will/pelican-themes/iris"
-# THEME = "/home/will/pelican-themes/sundown"
-THEME = "/home/will/pelican-themes/pelican-cait"
-# THEME = "/home/will/pelican-themes/Just-Read"
-# THEME = "/home/will/pelican-themes/notmyidea-cms"
+THEME = "neat"
 
 # Typographic improvements
 # TYPOGRIFY = True
 
 TWITTER_USERNAME = "wdtz"
 GOOGLE_ANALYTICS = "UA-2939626-5"
+
+# Specific to 'Neat' theme
+GITHUB_USERNAME = "dtzWill"
+AUTHOR_EMAIL = "wdietz2@uiuc.edu"
+AUTHOR_EMAIL_HASH = "619f7e0222ac40e3a95c2ae1cc240502"
