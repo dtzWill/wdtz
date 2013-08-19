@@ -1,0 +1,38 @@
+X11
+###
+
+:date: 2013-08-18
+:status: hidden
+
+Overview
+--------
+
+X Windows in a WebOS card.
+
+Revival of the old XSDL, bringing X to WebOS.
+Lots of homebrew has built on top of this,
+including various automated chroot installations
+for your linux goodness needs.
+
+Recognition
+-----------
+
+Lucky enough to be mentioned on news site such as
+Engadget_ and Gizmodo_.
+
+Links
+-----
+
+Wiki_
+
+GitHub_
+
+References
+----------
+
+.. target-notes::
+
+.. _Engadget: http://www.engadget.com/2010/04/09/webos-port-of-xorg-in-the-works-openoffice-support-the-inevitab/
+.. _Gizmodo: http://gizmodo.com/5513510/your-palm-pre-can-now-run-basically-any-linux-application
+.. _Wiki: http://www.webos-internals.org/wiki/Application:X
+.. _GitHub: https://github.com/dtzWill/xserver_webos

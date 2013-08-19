@@ -25,7 +25,19 @@ Research
 `OpenJDK Port of VMKit <|filename|proj/vmkit.rst>`_
   Port of LLVM-based JVM to OpenJDK.
 
-.. ----------------------
-.. 
-.. WebOS
-.. =====
+----------------------
+
+WebOS
+=====
+
+`wTerm <|filename|proj/wterm.rst>`_
+  WebOS Terminal Emulator.
+`VisualBoyAdvance <|filename|proj/vba.rst>`_ (hot apps winner)
+  Game Boy, Game Boy Color, and Game Boy Advance Emulator.
+`SuperNES <|filename|proj/supernes.rst>`_ (hot apps winner)
+  Super Nintendo Emulator.
+`X11 <|filename|proj/x11.rst>`_
+  X Windows on WebOS (in a card).
+`Quake <|filename|proj/quake.rst>`_
+  WebOS port of Quake.
+
