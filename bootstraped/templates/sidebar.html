@@ -1,0 +1,55 @@
+{% if not active_page %}
+<ul class="nav nav-list well sidebar">
+	<li class="nav-header">
+		<h4>
+			<i class="icon-rss icon-large"></i> 
+			RSS/Atom Feeds
+		</h4>
+	</li>
+	<li>
+		<a href="{{ SITEURL }}/{{ FEED_ALL_ATOM }}" rel="alternate">
+		<i class="icon-bookmark icon-large"></i>
+		Atom Feed
+		</a>
+	</li>
+	{% if FEED_ALL_RSS %}
+	<li>
+		<a href="{{ SITEURL }}/{{ FEED_ALL_RSS }}" rel="alternate">
+		<i class="icon-bookmark icon-large"></i>
+		RSS Feed</a>
+	</li>
+	{% endif %}
+	{% if LINKS %}
+	<li class="nav-header"><h4><i class="icon-external-link"></i>Blogroll</h4></li>
+		{% for name, link in LINKS %}
+		<li><a href="{{ link }}"><i class="icon-external-link"></i>{{ name }}</a></li>
+		{% endfor %}
+	{% endif %}
+	{% if SOCIAL %}
+	<li class="nav-header"><h4><i class="icon-home icon-large"></i> Social</h4></li>
+		{% for name, link in SOCIAL %}
+		<li><a href="{{ link }}"><i class="icon-{{ name|lower }} icon-large"></i>{{ name }}</a></li>
+		{% endfor %}
+	{% endif %}
+	
+	<li class="nav-header"><h4><i class="icon-folder-close icon-large"></i>Categories</h4></li>
+	
+	{% for cat, null in categories %}
+	<li>
+		<a href="{{ SITEURL }}/{{ cat.url }}">
+		<i class="icon-folder-open icon-large"></i>
+		{{ cat }}
+		</a>
+	</li>
+	{% endfor %}
+	
+	<li class="nav-header"><h4><i class="icon-tags icon-large"></i>Tags</h4></li>
+	{% for tag in tag_cloud %}
+	<li class="tag-{{ tag.1 }}">
+		<a href="{{ SITEURL }}/{{ tag.0.url }}">
+        <i class="icon-tag icon-large"></i>{{ tag.0 }}
+		</a>
+	</li>
+	{% endfor %}
+</ul>
+{% endif %}

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="{{ DEFAULT_LANG }}">
+<head>
+	{% block head %}
+	<title>{% block title %}{{ SITENAME }}{% endblock title %}</title>
+	<meta charset="utf-8" />
+	<meta name="author" content="{{ AUTHOR }}" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<!-- JS Libraries to Load -->
+	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script src="{{ SITEURL }}/theme/js/bootstrap.min.js"></script>
+	<script src="{{ SITEURL }}/theme/js/progressbars.js"></script>
+	
+	
+	<!-- CSS Styles -->
+	{% if NON_GENERIC_BOOTSTRAP %}
+	<link rel="stylesheet" href="{{ SITEURL }}/theme/css/bootstrap.{{ NON_GENERIC_BOOTSTRAP }}.min.css" type="text/css" />
+	{% else %}
+	<link rel="stylesheet" href="{{ SITEURL }}/theme/css/bootstrap.min.css" type="text/css" />
+	{% endif %}
+	<link rel="stylesheet" href="{{ SITEURL }}/theme/css/bootstrap-responsive.min.css" type="text/css" />
+	<link rel="stylesheet" href="{{ SITEURL }}/theme/css/font-awesome.min.css" type="text/css" />
+	<link rel="stylesheet" href="{{ SITEURL }}/theme/css/main.css" type="text/css">
+	<link rel="stylesheet" href="{{ SITEURL }}/theme/css/pygment.css" type="text/css">
+	<!--[if IE 7]>
+	<link rel="stylesheet" href="{{ SITEURL }}/theme/css/font-awesome-ie7.min.css">
+	<![endif]-->
+	
+	<!-- Feed Information / Copied from Simple Theme -->
+	{% if FEED_ALL_ATOM %}
+	<link href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Full Atom Feed" />
+	{% endif %}
+	{% if FEED_ALL_RSS %}
+	<link href="{{ FEED_DOMAIN }}/{{ FEED_ALL_RSS }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} Full RSS Feed" />
+	{% endif %}
+	{% if FEED_ATOM %}
+	<link href="{{ FEED_DOMAIN }}/{{ FEED_ATOM }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Atom Feed" />
+	{% endif %}
+	{% if FEED_RSS %}
+	<link href="{{ FEED_DOMAIN }}/{{ FEED_RSS }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} RSS Feed" />
+	{% endif %}
+	{% if CATEGORY_FEED_ATOM %}
+	<link href="{{ FEED_DOMAIN }}/{{ CATEGORY_FEED_ATOM|format(category) }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Categories Atom Feed" />
+	{% endif %}
+	{% if CATEGORY_FEED_RSS %}
+	<link href="{{ FEED_DOMAIN }}/{{ CATEGORY_FEED_RSS|format(category) }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} Categories RSS Feed" />
+	{% endif %}
+	{% if TAG_FEED_ATOM %}
+	<link href="{{ FEED_DOMAIN }}/{{ TAG_FEED_ATOM|format(tag) }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Tags Atom Feed" />
+	{% endif %}
+	{% if TAG_FEED_RSS %}
+	<link href="{{ FEED_DOMAIN }}/{{ TAG_FEED_RSS|format(tag) }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} Tags RSS Feed" />
+	{% endif %}
+	{% endblock head %}
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+	<div class="navbar-inner">
+		<div class="container pull-left offset1">
+			<a class="btn btn-navbar clearfix pull-right" data-target=".navbar-responsive-collapse" data-toggle="collapse">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</a>
+			<a class="brand" href="{{ SITEURL }}/index.html">{{ SITENAME }} {% if SITESUBTITLE %} <small>{{ SITESUBTITLE }}</small>{% endif %}</a>
+			
+			<div class="nav-collapse collapse navbar-responsive-collapse">
+				<ul class="nav">
+				{% if DISPLAY_PAGES_ON_MENU %}
+				{% for page in PAGES %}
+					<li>
+						<a href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a>
+					</li>
+					<li class="divider-vertical"></li>
+				{% endfor %}
+				{% endif %}
+				{% for cat, null in categories %}
+					<li {% if cat == category %}class="active"{% endif %}>
+						<a href="{{ SITEURL }}/{{ cat.url }}"><i class="icon-folder-open icon-large"></i> {{ cat }}</a>
+					</li>
+					<li class="divider-vertical"></li>
+				{% endfor %}
+				{% for title, link in MENUITEMS %}
+					<li {% if title == active_page %}class="active"{% endif %}>
+						<a href="{{ SITEURL }}/{{ link }}"><i class="icon-user"></i> {{ title }}</a>
+					</li>
+					<li class="divider-vertical"></li>
+				{% endfor %}
+				<li {% if archive_on %}class="active"{% endif %}>
+					<a href="{{ SITEURL }}/archives.html"><i class="icon-th-list"></i> Archives</a>
+				</li>
+				
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="container-fluid" id="content">
+	<div class="row-fluid">
+		<div class="span1"></div>
+		<div class="span10">
+			<div class="row">
+				<div class="offset1 span8">
+					{% block content %}
+					{% endblock content %}
+				</div>
+				<div class="span3">
+					{% include 'sidebar.html' %}
+				</div>
+			</div>
+		</div>
+		<div class="span1"></div>
+	</div>
+</div>
+
+<footer class="navbar-fixed-bottom text-center">
+Copyright &copy; 2013 by {{ AUTHOR }}
+</footer>
+</body>
+</html>

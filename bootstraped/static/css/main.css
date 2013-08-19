@@ -1,0 +1,25 @@
+
+@media (min-width: 980px) {
+	#content {
+		padding-top: 60px;
+		padding-bottom: 40px;
+	}
+	
+}
+
+.label {
+	margin-right: 10px;
+}
+
+/*
+.nav-list li a {
+	color: rgb(85, 85, 85);
+}
+*/
+
+
+
+footer {
+	background: inherit;
+}
+

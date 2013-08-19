@@ -38,7 +38,11 @@ RELATIVE_URLS = True
 USE_FOLDER_AS_CATEGORY = True
 DISPLAY_PAGES_ON_MENU = True
 
-THEME = "neat"
+THEME = "bootstraped"
+
+DEFAULT_TRUNCATE = 500
+NON_GENERIC_BOOTSTRAP = "cyborg"
+
 
 # Typographic improvements
 # TYPOGRIFY = True

@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% set archive_on = "true" %}
+{% block content %}
+<section id="content">
+<h1>Archive for {{ SITENAME }}</h1>
+
+<dl class="dl-horizontal">
+{% for article in dates %}
+	<dt>{{ article.locale_date }}</dt>
+	<dd><a href='{{ article.url }}'>{{ article.title }}</a></dd>
+{% endfor %}
+</dl>
+</section>
+{% endblock %}
