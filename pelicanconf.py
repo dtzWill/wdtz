@@ -27,7 +27,7 @@ FEED_RSS = None
 SOCIAL = (
     ('Twitter', 'http://twitter.com/wdtz'),
     ('Github', 'http://github.com/dtzWill'),
-    ('Facebook', 'http://facebook/dtzWill'),
+    ('Facebook', 'http://facebook.com/dtzWill'),
     ('Google-Plus', 'http://wdtz.org/+'),
     ('##uiuc on Freenode', 'http://webchat.freenode.net/?channels=##uiuc'),)
 
