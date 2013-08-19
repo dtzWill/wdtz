@@ -1,7 +1,8 @@
 New Website
 ###########
 
-:date: 2013-08-19
+:date: 2013-08-19 9:00
+:tags: first post, pelican
 
 
 Obligatory post announcing new website:

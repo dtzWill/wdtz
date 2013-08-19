@@ -1,7 +1,8 @@
 Curl Globbing Bugs
 ##################
 
-:date: 2013-08-19
+:date: 2013-08-19 10:00
+:tags: integer, bug, curl
 
 I recently discovered a slew of bugs in curl_,
 which occur in all versions I have access to,
