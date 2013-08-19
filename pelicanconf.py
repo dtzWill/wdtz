@@ -22,7 +22,10 @@ TRANSLATION_FEED_ATOM = None
 #          ('You can modify those links in your config file', '#'),)
 
 # Social widget
-SOCIAL = (('<b>@wdtz</b>', 'http://twitter.com/wdtz'),)
+SOCIAL = (
+    ('twitter', 'http://twitter.com/wdtz'),
+    ('github', 'http://github.com/dtzWill'),
+    ('##uiuc on Freenode', 'http://webchat.freenode.net/?channels=##uiuc'),)
 
 DEFAULT_PAGINATION = False
 
