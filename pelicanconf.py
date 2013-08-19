@@ -50,3 +50,6 @@ EMAIL_ADDRESS = "wdietz2@uiuc.edu"
 # TYPOGRIFY = True
 
 TWITTER_USERNAME = "wdtz"
+
+PLUGIN_PATH = "/home/will/pelican-plugins"
+PLUGINS = ["neighbors", "summary"]
