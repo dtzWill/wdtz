@@ -51,4 +51,3 @@ EMAIL_ADDRESS = "wdietz2@uiuc.edu"
 
 TWITTER_USERNAME = "wdtz"
 GOOGLE_ANALYTICS = "UA-2939626-5"
-
