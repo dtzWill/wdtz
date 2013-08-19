@@ -54,4 +54,4 @@ TWITTER_USERNAME = "wdtz"
 SUMMARY_END_MARKER = "PELICAN_END_SUMMARY"
 
 PLUGIN_PATH = "/home/will/pelican-plugins"
-PLUGINS = ["neighbors", "summary"]
+PLUGINS = ["neighbors", "summary", "optimize_images"]
