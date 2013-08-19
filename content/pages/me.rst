@@ -1,11 +1,5 @@
-Will
-####
-
 :date: 2013-08-18
-
-
-
-:category: About
+:slug: about
 
 Bio
 ===
@@ -21,7 +15,6 @@ My research interests include:
 * Virtualization Technologies
 * Program Analysis (esp C/C++)
 
-(In no particular order)
 
 Contact
 =======
@@ -40,6 +33,3 @@ Email
 .. _UIUC: http://illinois.edu
 .. _Computer Science: http://cs.uiuc.edu
 .. _Vikram Adve: http://llvm.cs.illinois.edu/~vadve
-
-
-
