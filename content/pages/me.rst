@@ -4,11 +4,10 @@ About
 :date: 2013-08-18
 :slug: about
 
-Bio
-===
 I'm currently a Ph.D candidate at UIUC_, studying `Computer Science`_ under `Vikram Adve`_ with high-level interests of Compilers and Systems.
 
-My research interests include:
+Research Interests:
+-------------------
 
 * Integer Overflows
 * Static and Dynamic Information Flow
@@ -17,21 +16,6 @@ My research interests include:
 * Compiler-based security techniques
 * Virtualization Technologies
 * Program Analysis (esp C/C++)
-
-
-Contact
-=======
-
-You can reach me:
-
-IRC
-  dtzWill (various networks)
-Twitter
-  http://twitter.com/wdtz
-G+
-  http://wdtz.org/+
-Email
-  wdietz2@uiuc.edu
 
 .. _UIUC: http://illinois.edu
 .. _Computer Science: http://cs.uiuc.edu
