@@ -51,5 +51,7 @@ EMAIL_ADDRESS = "wdietz2@uiuc.edu"
 
 TWITTER_USERNAME = "wdtz"
 
+SUMMARY_END_MARKER = "PELICAN_END_SUMMARY"
+
 PLUGIN_PATH = "/home/will/pelican-plugins"
 PLUGINS = ["neighbors", "summary"]

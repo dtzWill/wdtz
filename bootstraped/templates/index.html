@@ -20,7 +20,8 @@
 			<h1><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h1>
 			<div class="well small">{% include "article_subtitle.html" %}</div>
 			<div class="summary">
-				{{ article.content|truncate(DEFAULT_TRUNCATE, false, '<a href="'+ SITEURL+'/'+article.url+'">...</a>') }}
+        {{ article.summary }}
+        <a href="{{ SITEURL }}/{{ article.url }}">(Read Full Post...)</a>
 			</div>
 		</div>
 		<hr />
