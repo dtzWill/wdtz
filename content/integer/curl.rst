@@ -3,8 +3,6 @@ Curl Globbing Bugs
 
 :date: 2013-08-19
 
-
-
 I recently discovered a slew of bugs in curl_,
 which occur in all versions I have access to,
 including latest release at time of writing (7.32.0)
