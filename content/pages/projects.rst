@@ -25,7 +25,7 @@ Research
 `OpenJDK Port of VMKit <|filename|proj/vmkit.rst>`_
   Port of LLVM-based JVM to OpenJDK.
 
-----------------------
-
-WebOS
-=====
+.. ----------------------
+.. 
+.. WebOS
+.. =====
