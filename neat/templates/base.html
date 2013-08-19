@@ -34,10 +34,18 @@
 
     <div class="splash">
         <div class="container">
-          <div class="categories">
-          {% for cat, null in categories %}
-            <b><a href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a></b>&nbsp;&nbsp;
-          {% endfor %}
+          <div class="menu">
+            {% for title, link in MENUITEMS %}
+             <b><a href="{{ link }}">{{ title }}</a></b>&nbsp;&nbsp;
+            {% endfor %}
+            {% if DISPLAY_PAGES_ON_MENU %}
+              {% for page in pages %}
+                <b><a href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a></b>&nbsp;&nbsp;
+              {% endfor %}
+            {% endif %}
+            {% for cat, null in categories %}
+              <b><a href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a></b>&nbsp;&nbsp;
+            {% endfor %}
           </div>
         </div>
     </div>
