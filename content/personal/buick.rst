@@ -91,6 +91,9 @@ So with that, I say:
 .. epigraph::
   So long, and thanks for all the fish!
 
+|Alternator|
+|Engine|
+
 .. |Front| image:: images/buick/6-thumb.jpg
    :alt: Front of Buick
    :target: images/buick/6.jpg
