@@ -2,9 +2,14 @@
 {% block content_title %}{% endblock content_title %}
 {% block content %}
 
+{% if not articles_page.has_previous() and not category and not tag %}
 <h1>Welcome!</h1>
 <p>Here you'll find my notes on life, research, and whatever else tickles my fancy.</p>
 <p>Use the navigation bar above to find out more about me or my projects, or browse the article posts below.</p>
+
+<hr />
+
+{% endif %}
 
 
 <!-- If we have articles to display -->
@@ -12,7 +17,6 @@
 	{% block index_header %}
 	{% endblock %}
 
-  <hr />
   <h1>Articles</h1>
 
 	<!-- Iterate through the articles in the page -->
