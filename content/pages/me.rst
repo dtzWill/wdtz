@@ -22,7 +22,8 @@ Publications
 
 `"Understanding Integer Overflow in C/C++"`_
   :Authors: Will Dietz, Peng Li, John Regehr, and Vikram Adve
-  :Published: Proc. of the 2012 International Conference on Software Engineering (ICSE'12) Zurich, Switzerland, June 2012.
+  :Published: Proc. of the 2012 International Conference on Software Engineering (ICSE'12)
+  :Where: Zurich, Switzerland
   :WWW: `IOC (Integer Overflow Checker)`_, `LLVM Publication Page`_
   :Other: **Awarded an ACM SIGSOFT Distinguished Paper Award**
 
