@@ -85,7 +85,7 @@
       <li {% if archive_on %}class="active"{% endif %}>
         <a href="{{ SITEURL }}/archives.html"><i class="icon-th-list"></i> Archives</a>
       </li>
-      <!--
+      {% if THEME_CHANGER %}
       <li class="dropdown">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Theme<b class="caret"></b></a>
         <ul class="dropdown-menu">
@@ -97,7 +97,7 @@
           <li><a href="#" class="change-style-menu-item" rel="//netdna.bootstrapcdn.com/bootswatch/3.0.0/spacelab/bootstrap.min.css"><i class="icon-fixed-width icon-pencil"></i> Spacelab</a></li>
         </ul>
       </li>
-      -->
+      {% endif %}
     </ul>
   </div>
 </div>
@@ -138,6 +138,7 @@
   <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 
 
+  {% if THEME_CHANGER %}
   <!-- Theme changing function -->
   <script type="text/javascript">
   /*<![CDATA[*/
@@ -150,6 +151,7 @@
       });
   /*]]>*/
   </script>
+  {% endif %}
 
 <footer class="navbar-fixed-bottom text-center">
   <i>Where There's a Will There's a Way</i> | Copyright &copy; 2013 by {{ AUTHOR }}

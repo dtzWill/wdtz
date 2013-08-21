@@ -17,6 +17,8 @@ TRANSLATION_FEED_ATOM = None
 FEED_ATOM = None
 FEED_RSS = None
 
+THEME_CHANGER = True
+
 # Blogroll
 #LINKS =  (('Pelican', 'http://getpelican.com/'),
 #          ('Python.org', 'http://python.org/'),
