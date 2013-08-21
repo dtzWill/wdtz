@@ -10,12 +10,8 @@
   <style>{% include "fonts.css" %}</style>
   <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
 	
-  <!-- CSS Styles -->
-  {% if NON_GENERIC_BOOTSTRAP %}
-  <link href="//netdna.bootstrapcdn.com/bootswatch/3.0.0/{{ NON_GENERIC_BOOTSTRAP }}/bootstrap.min.css" rel="stylesheet">
-  {% else %}
-  <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.no-icons.min.css" rel="stylesheet">
-  {% endif %}
+  <link href="//netdna.bootstrapcdn.com/bootswatch/3.0.0/cyborg/bootstrap.min.css" rel="stylesheet" title="main">
+  <!-- <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.no-icons.min.css" rel="stylesheet"> -->
 
   <style>{% include "main.css" %}</style>
 
@@ -89,6 +85,19 @@
       <li {% if archive_on %}class="active"{% endif %}>
         <a href="{{ SITEURL }}/archives.html"><i class="icon-th-list"></i> Archives</a>
       </li>
+      <!--
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Theme<b class="caret"></b></a>
+        <ul class="dropdown-menu">
+          <li><a href="#" class="change-style-menu-item" rel="//netdna.bootstrapcdn.com/bootswatch/3.0.0/cyborg/bootstrap.min.css"><i class="icon-fixed-width icon-pencil"></i> Cyborg (Default)</a></li>
+          <li><a href="#" class="change-style-menu-item" rel="//netdna.bootstrapcdn.com/bootswatch/3.0.0/cerulean/bootstrap.min.css"><i class="icon-fixed-width icon-pencil"></i> Cerulean</a></li>
+          <li><a href="#" class="change-style-menu-item" rel="//netdna.bootstrapcdn.com/bootswatch/3.0.0/cosmo/bootstrap.min.css"><i class="icon-fixed-width icon-pencil"></i> Cosmo</a></li>
+          <li><a href="#" class="change-style-menu-item" rel="//netdna.bootstrapcdn.com/bootswatch/3.0.0/flatly/bootstrap.min.css"><i class="icon-fixed-width icon-pencil"></i> Flatly</a></li>
+          <li><a href="#" class="change-style-menu-item" rel="//netdna.bootstrapcdn.com/bootswatch/3.0.0/readable/bootstrap.min.css"><i class="icon-fixed-width icon-pencil"></i> Readable</a></li>
+          <li><a href="#" class="change-style-menu-item" rel="//netdna.bootstrapcdn.com/bootswatch/3.0.0/spacelab/bootstrap.min.css"><i class="icon-fixed-width icon-pencil"></i> Spacelab</a></li>
+        </ul>
+      </li>
+      -->
     </ul>
   </div>
 </div>
@@ -127,6 +136,20 @@
   <!-- JS Libraries to Load -->
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+
+
+  <!-- Theme changing function -->
+  <script type="text/javascript">
+  /*<![CDATA[*/
+      jQuery(function($)
+      {
+          $('body').on('click', '.change-style-menu-item', function()
+          {
+              $('link[title="main"]').attr('href', $(this).attr('rel'));
+          });
+      });
+  /*]]>*/
+  </script>
 
 <footer class="navbar-fixed-bottom text-center">
   <i>Where There's a Will There's a Way</i> | Copyright &copy; 2013 by {{ AUTHOR }}
