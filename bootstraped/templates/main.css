@@ -23,3 +23,7 @@ footer {
 	background: inherit;
 }
 
+.sidebar {
+  padding-left: 20px;
+  border-left: 1px solid #222;
+}
