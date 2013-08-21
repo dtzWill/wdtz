@@ -9,18 +9,17 @@
 	
 	<!-- JS Libraries to Load -->
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-	<script src="{{ SITEURL }}/theme/js/bootstrap.min.js"></script>
-	<script src="{{ SITEURL }}/theme/js/progressbars.js"></script>
+  <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
 	
 	
 	<!-- CSS Styles -->
 	{% if NON_GENERIC_BOOTSTRAP %}
 	<link rel="stylesheet" href="{{ SITEURL }}/theme/css/bootstrap.{{ NON_GENERIC_BOOTSTRAP }}.min.css" type="text/css" />
 	{% else %}
-	<link rel="stylesheet" href="{{ SITEURL }}/theme/css/bootstrap.min.css" type="text/css" />
+  <link href="//netdna.bootstrapcdn.com/bootstrap/2.3.2/css/bootstrap.min.css" rel="stylesheet">
 	{% endif %}
 	<link rel="stylesheet" href="{{ SITEURL }}/theme/css/bootstrap-responsive.min.css" type="text/css" />
-	<link rel="stylesheet" href="{{ SITEURL }}/theme/css/font-awesome.min.css" type="text/css" />
+  <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="{{ SITEURL }}/theme/css/main.css" type="text/css">
 	<link rel="stylesheet" href="{{ SITEURL }}/theme/css/pygment.css" type="text/css">
 	<!--[if IE 7]>
