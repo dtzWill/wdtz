@@ -20,22 +20,22 @@
 	</li>
 	{% endif %}
 	{% if LINKS %}
-	<li class="nav-header"><h4><i class="icon-external-link"></i>Blogroll</h4></li>
+	<li class="nav-header"><h4><i class="icon-external-link"></i> Blogroll</h4></li>
 		{% for name, link in LINKS %}
-		<li><a href="{{ link }}"><i class="icon-external-link"></i>{{ name }}</a></li>
+		<li><a href="{{ link }}"><i class="icon-external-link"></i> {{ name }}</a></li>
 		{% endfor %}
 	{% endif %}
 	{% if SOCIAL %}
 	<li class="nav-header"><h4><i class="icon-home icon-large"></i> Social</h4></li>
     {% if EMAIL_ADDRESS %}
-		<li><a href="mailto:{{ EMAIL_ADDRESS }}"><i class="icon-envelope icon-large"></i>Email</a></li>
+		<li><a href="mailto:{{ EMAIL_ADDRESS }}"><i class="icon-envelope icon-large"></i> Email</a></li>
     {% endif %}
 		{% for name, link in SOCIAL %}
-		<li><a href="{{ link }}"><i class="icon-{{ name|lower }} icon-large"></i>{{ name }}</a></li>
+		<li><a href="{{ link }}"><i class="icon-{{ name|lower }} icon-large"></i> {{ name }}</a></li>
 		{% endfor %}
 	{% endif %}
 	
-	<li class="nav-header"><h4><i class="icon-folder-close icon-large"></i>Categories</h4></li>
+	<li class="nav-header"><h4><i class="icon-folder-close icon-large"></i> Categories</h4></li>
 	
 	{% for cat, null in categories %}
 	<li>
@@ -46,11 +46,11 @@
 	</li>
 	{% endfor %}
 	
-	<li class="nav-header"><h4><i class="icon-tags icon-large"></i>Tags</h4></li>
+	<li class="nav-header"><h4><i class="icon-tags icon-large"></i> Tags</h4></li>
 	{% for tag in tag_cloud %}
 	<li class="tag-{{ tag.1 }}">
 		<a href="{{ SITEURL }}/{{ tag.0.url }}">
-        <i class="icon-tag icon-large"></i>{{ tag.0 }}
+        <i class="icon-tag icon-large"></i> {{ tag.0 }}
 		</a>
 	</li>
 	{% endfor %}
