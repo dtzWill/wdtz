@@ -7,7 +7,7 @@
 	<meta name="author" content="{{ AUTHOR }}" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
-	
+  <style>{% include "fonts.css" %}</style>
 	
   <!-- CSS Styles -->
   {% if NON_GENERIC_BOOTSTRAP %}
@@ -22,22 +22,7 @@
   <![endif]-->
 
   <!-- <link rel="stylesheet" href="{{ SITEURL }}/theme/css/main.css" type="text/css"> -->
-  <style>
-    @media (min-width: 980px) {
-      #content {
-        padding-top: 60px;
-        padding-bottom: 40px;
-      }
-    }
-
-    .label {
-      margin-right: 10px;
-    }
-
-    footer {
-      background: inherit;
-    }
-  </style>
+  <style>{% include "main.css" %}</style>
 
 	<link rel="stylesheet" href="{{ SITEURL }}/theme/css/pygment.css" type="text/css">
 	
