@@ -1,14 +1,14 @@
-<div class="row-fluid">
-	<div class="span6">
-	<span class="label text-center">Date</span>
+<div class="row">
+	<div class="col-md-6">
+	<span class="label label-default text-center">Date</span>
 	<abbr class="published" title="{{ article.date.isoformat() }}">
 		<i class="icon-calendar"></i>{{ article.locale_date }}
 	</abbr>
 	</div>
 	{% if article.tags %}
-	<div class="span1">&nbsp;</div>
-	<div class="span5">
-		<span class="label text-center">Tags</span>
+	<div class="col-md-1">&nbsp;</div>
+	<div class="col-md-5">
+		<span class="label label-default text-center">Tags</span>
 		{% for tag in article.tags %}
 			<a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>
 		{% endfor %}

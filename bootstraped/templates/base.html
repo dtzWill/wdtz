@@ -8,22 +8,18 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
   <style>{% include "fonts.css" %}</style>
+  <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
 	
   <!-- CSS Styles -->
   {% if NON_GENERIC_BOOTSTRAP %}
-  <link rel="stylesheet" href="{{ SITEURL }}/theme/css/bootstrap.{{ NON_GENERIC_BOOTSTRAP }}.min.css" type="text/css" />
+  <link href="//netdna.bootstrapcdn.com/bootswatch/3.0.0/{{ NON_GENERIC_BOOTSTRAP }}/bootstrap.min.css" rel="stylesheet">
   {% else %}
-  <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap.min.css" rel="stylesheet">
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.no-icons.min.css" rel="stylesheet">
   {% endif %}
-  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-responsive.min.css" type="text/css" />
-  <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
-  <!--[if IE 7]>
-    <link rel="stylesheet" href="{{ SITEURL }}/theme/css/font-awesome-ie7.min.css">
-  <![endif]-->
 
-  <!-- <link rel="stylesheet" href="{{ SITEURL }}/theme/css/main.css" type="text/css"> -->
   <style>{% include "main.css" %}</style>
 
+  <!-- Code highlighting -->
 	<link rel="stylesheet" href="{{ SITEURL }}/theme/css/pygment.css" type="text/css">
 	
 	<!-- Feed Information / Copied from Simple Theme -->
@@ -54,62 +50,61 @@
 	{% endblock head %}
 </head>
 <body>
-<div class="navbar navbar-fixed-top">
-	<div class="navbar-inner">
-		<div class="container pull-left offset1">
-			<a class="btn btn-navbar clearfix pull-right" data-target=".navbar-responsive-collapse" data-toggle="collapse">
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-			</a>
-			<a class="brand" href="{{ SITEURL }}/index.html">{{ SITENAME }} {% if SITESUBTITLE %} <small>{{ SITESUBTITLE }}</small>{% endif %}</a>
-			
-			<div class="nav-collapse collapse navbar-responsive-collapse">
-				<ul class="nav">
-				{% if DISPLAY_PAGES_ON_MENU %}
-				{% for p in PAGES %}
-					<li {% if p == page %}class="active"{% endif %}>
-						<a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a>
-					</li>
-					<li class="divider-vertical"></li>
-				{% endfor %}
-				{% endif %}
-				{% for cat, null in categories %}
-					<li {% if cat == category %}class="active"{% endif %}>
-						<a href="{{ SITEURL }}/{{ cat.url }}"><i class="icon-folder-open icon-large"></i> {{ cat }}</a>
-					</li>
-					<li class="divider-vertical"></li>
-				{% endfor %}
-				{% for title, link in MENUITEMS %}
-					<li {% if title == active_page %}class="active"{% endif %}>
-						<a href="{{ SITEURL }}/{{ link }}"><i class="icon-user"></i> {{ title }}</a>
-					</li>
-					<li class="divider-vertical"></li>
-				{% endfor %}
-				<li {% if archive_on %}class="active"{% endif %}>
-					<a href="{{ SITEURL }}/archives.html"><i class="icon-th-list"></i> Archives</a>
-				</li>
-				
-				</ul>
-			</div>
-		</div>
-	</div>
+
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="{{ SITEURL }}/index.html">{{ SITENAME }} {% if SITESUBTITLE %} <small>{{ SITESUBTITLE }}</small>{% endif %}</a>
+  </div>
+  <!-- Collect the nav links, forms, and other content for toggling -->
+  <div class="collapse navbar-collapse navbar-ex1-collapse">
+    <ul class="nav navbar-nav">
+      {% if DISPLAY_PAGES_ON_MENU %}
+      {% for p in PAGES %}
+        <li {% if p == page %}class="active"{% endif %}>
+          <a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a>
+        </li>
+        <li class="divider-vertical"></li>
+      {% endfor %}
+      {% endif %}
+      {% for cat, null in categories %}
+        <li {% if cat == category %}class="active"{% endif %}>
+          <a href="{{ SITEURL }}/{{ cat.url }}"><i class="icon-folder-open icon-large"></i> {{ cat }}</a>
+        </li>
+        <li class="divider-vertical"></li>
+      {% endfor %}
+      {% for title, link in MENUITEMS %}
+        <li {% if title == active_page %}class="active"{% endif %}>
+          <a href="{{ SITEURL }}/{{ link }}"><i class="icon-user"></i> {{ title }}</a>
+        </li>
+        <li class="divider-vertical"></li>
+      {% endfor %}
+      <li {% if archive_on %}class="active"{% endif %}>
+        <a href="{{ SITEURL }}/archives.html"><i class="icon-th-list"></i> Archives</a>
+      </li>
+    </ul>
+  </div>
 </div>
-<div class="container-fluid" id="content">
-	<div class="row-fluid">
-		<div class="span1"></div>
-		<div class="span10">
+<div class="container" id="content">
+	<div class="row">
+		<div class="col-md-1"></div>
+		<div class="col-md-10">
 			<div class="row">
-				<div class="offset1 span8">
+				<div class="col-md-offset-1 col-md-8">
 					{% block content %}
 					{% endblock content %}
 				</div>
-				<div class="span3">
+				<div class="col-md-3">
 					{% include 'sidebar.html' %}
 				</div>
 			</div>
 		</div>
-		<div class="span1"></div>
+		<div class="col-md-1"></div>
 	</div>
 </div>
 
@@ -131,7 +126,7 @@
 
   <!-- JS Libraries to Load -->
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 
 <footer class="navbar-fixed-bottom text-center">
   <i>Where There's a Will There's a Way</i> | Copyright &copy; 2013 by {{ AUTHOR }}
