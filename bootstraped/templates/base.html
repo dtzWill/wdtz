@@ -9,13 +9,13 @@
 	
 	
 	
-	<!-- CSS Styles -->
-	{% if NON_GENERIC_BOOTSTRAP %}
-	<link rel="stylesheet" href="{{ SITEURL }}/theme/css/bootstrap.{{ NON_GENERIC_BOOTSTRAP }}.min.css" type="text/css" />
-	{% else %}
-  <link href="//netdna.bootstrapcdn.com/bootstrap/2.3.2/css/bootstrap.min.css" rel="stylesheet">
-	{% endif %}
-	<link rel="stylesheet" href="{{ SITEURL }}/theme/css/bootstrap-responsive.min.css" type="text/css" />
+  <!-- CSS Styles -->
+  {% if NON_GENERIC_BOOTSTRAP %}
+  <link rel="stylesheet" href="{{ SITEURL }}/theme/css/bootstrap.{{ NON_GENERIC_BOOTSTRAP }}.min.css" type="text/css" />
+  {% else %}
+  <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap.min.css" rel="stylesheet">
+  {% endif %}
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-responsive.min.css" type="text/css" />
   <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
   <!--[if IE 7]>
     <link rel="stylesheet" href="{{ SITEURL }}/theme/css/font-awesome-ie7.min.css">
