@@ -3,7 +3,7 @@
 {% block content %}
 
 {% if not articles_page.has_previous() and not category and not tag %}
-<h1>Welcome!</h1>
+<h2>Welcome!</h2>
 <p>Here you'll find my notes on life, research, and whatever else tickles my fancy.</p>
 <p>Use the navigation bar above to find out more about me or my projects, or browse the article posts below.</p>
 
@@ -21,7 +21,7 @@
 	<!-- Iterate through the articles in the page -->
 	{% for article in (articles_page.object_list if articles_page else articles) %}
 		<div class="article">
-			<h2><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h2>
+			<h3><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h3>
 			<div>{% include "article_subtitle.html" %}</div>
 			<div class="summary">
         {{ article.summary }}
