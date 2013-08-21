@@ -1,5 +1,5 @@
-Curl Globbing Bugs
-##################
+Several curl Globbing Bugs Reported, Fixed
+##########################################
 
 :date: 2013-08-19 10:00
 :tags: integer, bug, curl

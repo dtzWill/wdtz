@@ -1,5 +1,5 @@
-Undefined Behavior in Binutils
-##############################
+Undefined Behavior in Binutils Causes Segfault
+##############################################
 
 :date: 2013-08-19 14:24
 :tags: integer, bug, binutils, undefined

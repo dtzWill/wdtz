@@ -1,5 +1,5 @@
-wget --version integer error
-############################
+Analysis of Integer Error in Latest wget
+########################################
 
 :tags: integer, signedness, bug, wget
 :date: 2013-08-19 14:03
