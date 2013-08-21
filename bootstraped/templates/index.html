@@ -22,7 +22,7 @@
 	{% for article in (articles_page.object_list if articles_page else articles) %}
 		<div class="article">
 			<h2><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h2>
-			<div class="well-small">{% include "article_subtitle.html" %}</div>
+			<div>{% include "article_subtitle.html" %}</div>
 			<div class="summary">
         {{ article.summary }}
         <a href="{{ SITEURL }}/{{ article.url }}">(Read Full Post...)</a>
