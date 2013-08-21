@@ -29,7 +29,7 @@ SOCIAL = (
     ('Github', 'http://github.com/dtzWill'),
     ('Facebook', 'http://facebook.com/dtzWill'),
     ('Google-Plus', 'http://wdtz.org/+'),
-    ('##uiuc on Freenode', 'http://webchat.freenode.net/?channels=##uiuc'),)
+    ('##uiuc on Freenode', 'http://webchat.freenode.net/?channels=%23%23uiuc'),)
 
 DEFAULT_PAGINATION = 5
 DEFAULT_ORPHANS = 0
