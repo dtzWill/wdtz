@@ -20,17 +20,18 @@ Research Interests
 Publications
 ------------
 
-`"Understanding Integer Overflow in C/C++"`_
-  :Authors: Will Dietz, Peng Li, John Regehr, and Vikram Adve
-  :Published: Proc. of the 2012 International Conference on Software Engineering (ICSE'12)
-  :Where: Zurich, Switzerland
-  :WWW: `IOC (Integer Overflow Checker)`_, `LLVM Publication Page`_
-  :Other: **Awarded an ACM SIGSOFT Distinguished Paper Award**
-
+:Title: "Understanding Integer Overflow in C/C++"
+:Authors: Will Dietz, Peng Li, John Regehr, and Vikram Adve
+:Published: Proc. of the 2012 International Conference on Software Engineering (ICSE'12)
+:Where: Zurich, Switzerland
+:WWW: PDF_, `IOC (Integer Overflow Checker)`_, `LLVM Publication Page`_
+:Other: **Awarded an ACM SIGSOFT Distinguished Paper Award**
 
 .. _UIUC: http://illinois.edu
 .. _Computer Science: http://cs.uiuc.edu
 .. _Vikram Adve: http://llvm.cs.illinois.edu/~vadve
-.. _"Understanding Integer Overflow in C/C++": http://www.cs.utah.edu/~regehr/papers/overflow12.pdf
+.. _PDF: http://www.cs.utah.edu/~regehr/papers/overflow12.pdf
 .. _IOC (Integer Overflow Checker): |filename|/pages/proj/ioc.rst
 .. _LLVM Publication Page: http://llvm.org/pubs/2012-06-08-ICSE-UnderstandingIntegerOverflow.html
+
+
