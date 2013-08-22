@@ -9,8 +9,8 @@
 	<div class="col-md-1">&nbsp;</div>
 	<div class="col-md-5">
 		<span class="label label-default text-center">Tags</span>
-		{% for tag in article.tags %}
-			<a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>
+		{% for tag in article.tags | sort %}
+			<a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>{% if not loop.last %}, {% endif %}
 		{% endfor %}
 	</div>
 	{% endif %}
