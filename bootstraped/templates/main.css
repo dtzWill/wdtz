@@ -1,10 +1,7 @@
 
-@media (min-width: 980px) {
-	#content {
-		padding-top: 60px;
-		padding-bottom: 40px;
-	}
-	
+#content {
+  padding-top: 60px;
+  padding-bottom: 40px;
 }
 
 .label {
