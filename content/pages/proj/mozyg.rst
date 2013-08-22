@@ -20,6 +20,8 @@ Slides_
 
 `Final Report`_
 
+---------------
+
 References
 ----------
 

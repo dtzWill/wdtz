@@ -21,6 +21,8 @@ Related
 `Project Page`_
 
 
+---------------
+
 References
 ----------
 .. target-notes::

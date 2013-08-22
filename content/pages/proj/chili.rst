@@ -19,6 +19,8 @@ Related
 
 More information is available at the `Chili Homepage`_.
 
+---------------
+
 References
 ----------
 

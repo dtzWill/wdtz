@@ -65,6 +65,8 @@ Lessons
 * Writing (even this post!) is remarkably hard.  Practice
   makes perfect.
 
+---------------
+
 References
 ----------
 

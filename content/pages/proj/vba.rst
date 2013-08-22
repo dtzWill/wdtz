@@ -30,6 +30,8 @@ Links
 
 `GitHub`_
 
+---------------
+
 References
 ----------
 

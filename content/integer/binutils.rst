@@ -131,6 +131,8 @@ Valgrind log from step #5 above:
   ==80032== For counts of detected and suppressed errors, rerun with: -v
   ==80032== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 4 from 4)
 
+---------------
+
 References
 ----------
 .. target-notes::

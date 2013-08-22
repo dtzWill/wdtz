@@ -35,6 +35,8 @@ overflows, and I'm glad the developer fixed them so quickly!
 Hopefully these fixes will reach everyone in the form of a
 new release soon :).
 
+---------------
+
 References
 ==========
 

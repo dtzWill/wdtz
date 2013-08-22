@@ -23,6 +23,8 @@ Related
 
 `Clang User Manual`_ (describes ``-fsanitize`` options)
 
+---------------
+
 References
 ----------
 

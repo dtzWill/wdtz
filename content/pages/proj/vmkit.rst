@@ -30,6 +30,8 @@ Related
 
 `Issue Tracker`_
 
+---------------
+
 References
 ----------
 

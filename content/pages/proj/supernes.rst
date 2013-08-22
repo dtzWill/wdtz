@@ -29,6 +29,8 @@ Links
 
 `GitHub`_
 
+---------------
+
 References
 ----------
 
