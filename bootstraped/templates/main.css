@@ -24,3 +24,11 @@ footer {
   padding-left: 20px;
   border-left: 1px solid #222;
 }
+
+/* Links in headers should be white */
+h1 a,
+h2 a,
+h3 a,
+h4 a {
+  color: white;
+}
