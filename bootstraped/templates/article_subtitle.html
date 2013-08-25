@@ -1,6 +1,6 @@
-<abbr class="published" title="{{ article.date.isoformat() }}">
-  <i class="icon-calendar"></i> {{ article.locale_date }}
-</abbr>
+<i class="icon-calendar"></i> {{ article.locale_date }}
+&nbsp;
+<i class="icon-time"></i> {{ article.date.strftime('%H:%M') }}
 &nbsp;in&nbsp;
 <i class="icon-folder-open icon-large icon-fixed-width"></i>
 <a href="{{ SITEURL }}/{{ article.category.url }}">

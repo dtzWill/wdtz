@@ -8,6 +8,8 @@ SITE_TAGLINE = "Where There's a Will There's a Way"
 
 TIMEZONE = 'America/Chicago'
 
+DEFAULT_DATE_FORMAT = '%a %m/%d/%y'
+
 DEFAULT_LANG = 'en'
 
 # Feed generation is usually not desired when developing
