@@ -1,17 +1,8 @@
-<div class="row">
-	<div class="col-md-4">
-	<span class="label label-default text-center">Date</span>
-	<abbr class="published" title="{{ article.date.isoformat() }}">
-		<i class="icon-calendar"></i> {{ article.locale_date }}
-	</abbr>
-	</div>
-	{% if article.tags %}
-	<div class="col-md-1">&nbsp;</div>
-	<div class="col-md-5">
-		<span class="label label-default text-center">Tags</span>
-		{% for tag in article.tags | sort %}
-			<a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>{% if not loop.last %}, {% endif %}
-		{% endfor %}
-	</div>
-	{% endif %}
-</div>
+<abbr class="published" title="{{ article.date.isoformat() }}">
+  <i class="icon-calendar"></i> {{ article.locale_date }}
+</abbr>
+&nbsp;in&nbsp;
+<i class="icon-folder-open icon-large icon-fixed-width"></i>
+<a href="{{ SITEURL }}/{{ article.category.url }}">
+  {{ article.category }}
+</a>

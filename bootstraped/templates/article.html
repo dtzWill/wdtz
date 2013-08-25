@@ -11,7 +11,16 @@
     </a>
   </h2>
 
-  <div class="well well-sm">{% include 'article_subtitle.html' %}</div>
+  <div class="well well-sm">
+    <div class="pull-right">{% if article.tags %}
+      <i class="icon-tags icon-large"></i>
+      {% for tag in article.tags | sort %}
+      <a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>{% if not loop.last %}, {% endif %}
+      {% endfor %}
+    {% endif %}
+    </div>
+    <div>{% include 'article_subtitle.html' %}</div>
+  </div>
 	
 	<div class="entry-content">
   <!-- <img class="pull-right img-rounded" src="{{ article.author_gravatar }}?s=200"></img> -->
