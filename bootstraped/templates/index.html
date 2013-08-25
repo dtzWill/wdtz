@@ -24,10 +24,8 @@
 			<h3><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h3>
 			<div>{% include "article_subtitle.html" %}</div>
       <p />
-			<div class="summary">
-        {{ article.summary }}
-        <a class="btn btn-default btn-xs" href="{{ SITEURL }}/{{ article.url }}" >Read Full Post</a>
-			</div>
+      <div class="summary">{{ article.summary }}</div>
+      <a class="btn btn-default btn-xs" href="{{ SITEURL }}/{{ article.url }}" >Read Full Post</a>
 		</div>
 		<hr />
 	{% endfor %}
