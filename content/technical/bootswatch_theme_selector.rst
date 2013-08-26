@@ -10,7 +10,7 @@ as I do.  To address these concerns I investigated
 what it would take to add a drop-down to this website
 to enable dynamic selection of themes by the user.
 
-.. figure:: images/bootswatch_theme_dropdown.png
+.. figure:: /images/bootswatch_theme_dropdown.png
    :alt: bootswatch theme dropdown
    :align: center
    :figclass: text-center

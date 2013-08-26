@@ -94,18 +94,18 @@ So with that, I say:
 |Alternator|
 |Engine|
 
-.. |Front| image:: images/buick/6-thumb.jpg
+.. |Front| image:: /images/buick/6-thumb.jpg
    :alt: Front of Buick
-   :target: images/buick/6.jpg
+   :target: /images/buick/6.jpg
 .. |Driver| image:: images/buick/5-thumb.jpg
    :alt: Driver-side of Buick
    :target: images/buick/5.jpg
-.. |Passenger| image:: images/buick/3-thumb.jpg
+.. |Passenger| image:: /images/buick/3-thumb.jpg
    :alt: Passenger-side of Buick
-   :target: images/buick/3.jpg
-.. |Engine| image:: images/buick/2-thumb.jpg
+   :target: /images/buick/3.jpg
+.. |Engine| image:: /images/buick/2-thumb.jpg
    :alt: Buick Engine
-   :target: images/buick/2.jpg
-.. |Alternator| image:: images/buick/1-thumb.jpg
+   :target: /images/buick/2.jpg
+.. |Alternator| image:: /images/buick/1-thumb.jpg
    :alt: Buick Alternator
-   :target: images/buick/1.jpg
+   :target: /images/buick/1.jpg
