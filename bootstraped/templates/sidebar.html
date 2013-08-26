@@ -31,7 +31,11 @@
 		<li><a href="mailto:{{ EMAIL_ADDRESS }}"><i class="icon-envelope icon-large icon-fixed-width"></i> Email</a></li>
     {% endif %}
 		{% for name, link in SOCIAL %}
-		<li><a href="{{ link }}"><i class="icon-{{ name|lower }} icon-large icon-fixed-width"></i> {{ name }}</a></li>
+      {% if name|lower == "facebook" %}
+        <li><a href="{{ link }}"><i class="icon-facebook-sign icon-large icon-fixed-width"></i> {{ name }}</a></li>
+      {% else %}
+        <li><a href="{{ link }}"><i class="icon-{{ name|lower }} icon-large icon-fixed-width"></i> {{ name }}</a></li>
+      {% endif %}
 		{% endfor %}
 	{% endif %}
 	
