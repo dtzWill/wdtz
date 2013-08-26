@@ -27,15 +27,8 @@
 	{% endif %}
 	{% if SOCIAL %}
 	<li class="nav-header"><h4><i class="icon-home icon-large icon-fixed-width"></i> Social</h4></li>
-    {% if EMAIL_ADDRESS_RECAPTCHA %}
-		<li><a href="{{ EMAIL_ADDRESS_RECAPTCHA }}"><i class="icon-envelope icon-large icon-fixed-width"></i> Email</a></li>
-    {% endif %}
-		{% for name, link in SOCIAL %}
-      {% if name|lower == "facebook" %}
-        <li><a href="{{ link }}"><i class="icon-facebook-sign icon-large icon-fixed-width"></i> {{ name }}</a></li>
-      {% else %}
-        <li><a href="{{ link }}"><i class="icon-{{ name|lower }} icon-large icon-fixed-width"></i> {{ name }}</a></li>
-      {% endif %}
+		{% for name, link, icon in SOCIAL %}
+    <li><a href="{{ link }}"><i class="{{ icon }} icon-large icon-fixed-width"></i> {{ name }}</a></li>
 		{% endfor %}
 	{% endif %}
 	

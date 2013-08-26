@@ -29,11 +29,12 @@ THEME_CHANGER = True
 
 # Social widget
 SOCIAL = (
-    ('Twitter', 'http://twitter.com/wdtz'),
-    ('Github', 'http://github.com/dtzWill'),
-    ('Facebook', 'http://facebook.com/dtzWill'),
-    ('Google-Plus', 'http://wdtz.org/+'),
-    ('##uiuc on Freenode', 'http://webchat.freenode.net/?channels=%23%23uiuc'),)
+    ('Email', 'http://www.google.com/recaptcha/mailhide/d?k=01sjWttqALQwPoufFVhsbSgg==&c=O5DKj0E0KM4igqH2agQcbtZfhjmI7uQDXGZabETy5rI="', 'icon-envelope'),
+    ('Twitter', 'http://twitter.com/wdtz', 'icon-twitter'),
+    ('Github', 'http://github.com/dtzWill', 'icon-github'),
+    ('Facebook', 'http://facebook.com/dtzWill', 'icon-facebook-sign'),
+    ('Google-Plus', 'http://wdtz.org/+', 'icon-google-plus'),
+    ('##uiuc on Freenode', 'http://webchat.freenode.net/?channels=%23%23uiuc', 'icon-comment'),)
 
 DEFAULT_PAGINATION = 5
 DEFAULT_ORPHANS = 0
@@ -48,7 +49,6 @@ THEME = "bootstraped"
 
 DEFAULT_TRUNCATE = 500
 NON_GENERIC_BOOTSTRAP = "cyborg"
-EMAIL_ADDRESS_RECAPTCHA = "http://www.google.com/recaptcha/mailhide/d?k=01sjWttqALQwPoufFVhsbSgg==&c=O5DKj0E0KM4igqH2agQcbtZfhjmI7uQDXGZabETy5rI="
 
 # Typographic improvements
 # TYPOGRIFY = True
