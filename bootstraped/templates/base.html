@@ -86,14 +86,14 @@
       <li class="dropdown" id="theme-dropdown">
       <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-cogs icon-large"></i> Theme<b class="caret"></b></a>
         <ul class="dropdown-menu">
-          <li><a href="#" class="change-style-menu-item" rel="//netdna.bootstrapcdn.com/bootswatch/3.0.0/cyborg/bootstrap.min.css"><i class="icon-fixed-width icon-pencil"></i> Cyborg (Default)</a></li>
-          <li><a href="#" class="change-style-menu-item" rel="//netdna.bootstrapcdn.com/bootswatch/3.0.0/cerulean/bootstrap.min.css"><i class="icon-fixed-width icon-pencil"></i> Cerulean</a></li>
-          <li><a href="#" class="change-style-menu-item" rel="//netdna.bootstrapcdn.com/bootswatch/3.0.0/cosmo/bootstrap.min.css"><i class="icon-fixed-width icon-pencil"></i> Cosmo</a></li>
-          <li><a href="#" class="change-style-menu-item" rel="//netdna.bootstrapcdn.com/bootswatch/3.0.0/flatly/bootstrap.min.css"><i class="icon-fixed-width icon-pencil"></i> Flatly</a></li>
-          <li><a href="#" class="change-style-menu-item" rel="//netdna.bootstrapcdn.com/bootswatch/3.0.0/journal/bootstrap.min.css"><i class="icon-fixed-width icon-pencil"></i> Journal</a></li>
-          <li><a href="#" class="change-style-menu-item" rel="//netdna.bootstrapcdn.com/bootswatch/3.0.0/readable/bootstrap.min.css"><i class="icon-fixed-width icon-pencil"></i> Readable</a></li>
-          <li><a href="#" class="change-style-menu-item" rel="//netdna.bootstrapcdn.com/bootswatch/3.0.0/slate/bootstrap.min.css"><i class="icon-fixed-width icon-pencil"></i> Slate</a></li>
-          <li><a href="#" class="change-style-menu-item" rel="//netdna.bootstrapcdn.com/bootswatch/3.0.0/spacelab/bootstrap.min.css"><i class="icon-fixed-width icon-pencil"></i> Spacelab</a></li>
+          <li><a href="#" class="change-style-menu-item" rel="cyborg"><i class="icon-fixed-width icon-pencil"></i> Cyborg (Default)</a></li>
+          <li><a href="#" class="change-style-menu-item" rel="cerulean"><i class="icon-fixed-width icon-pencil"></i> Cerulean</a></li>
+          <li><a href="#" class="change-style-menu-item" rel="cosmo"><i class="icon-fixed-width icon-pencil"></i> Cosmo</a></li>
+          <li><a href="#" class="change-style-menu-item" rel="flatly"><i class="icon-fixed-width icon-pencil"></i> Flatly</a></li>
+          <li><a href="#" class="change-style-menu-item" rel="journal"><i class="icon-fixed-width icon-pencil"></i> Journal</a></li>
+          <li><a href="#" class="change-style-menu-item" rel="readable"><i class="icon-fixed-width icon-pencil"></i> Readable</a></li>
+          <li><a href="#" class="change-style-menu-item" rel="slate"><i class="icon-fixed-width icon-pencil"></i> Slate</a></li>
+          <li><a href="#" class="change-style-menu-item" rel="spacelab"><i class="icon-fixed-width icon-pencil"></i> Spacelab</a></li>
         </ul>
       </li>
       {% endif %}
@@ -161,7 +161,9 @@
     /* When a theme-change item is selected, update theme */
     jQuery(function($) {
         $('body').on('click', '.change-style-menu-item', function() {
-          set_theme($(this).attr('rel'));
+          var theme_name = $(this).attr('rel');
+          var theme = "//netdna.bootstrapcdn.com/bootswatch/3.0.0/" + theme_name + "/bootstrap.min.css";
+          set_theme(theme);
         });
     });
 
