@@ -35,7 +35,7 @@ SOCIAL = (
     ('Google-Plus', 'http://wdtz.org/+'),
     ('##uiuc on Freenode', 'http://webchat.freenode.net/?channels=%23%23uiuc'),)
 
-DEFAULT_PAGINATION = 10
+DEFAULT_PAGINATION = 5
 DEFAULT_ORPHANS = 0
 
 # Uncomment following line if you want document-relative URLs when developing
