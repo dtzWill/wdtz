@@ -21,10 +21,20 @@
     </div>
     <div>{% include 'article_subtitle.html' %}</div>
   </div>
-	
-	<div class="entry-content">
-	{{ article.content }}
-	</div><!-- /.entry-content -->
+
+  <div class="entry-content">
+    {{ article.content }}
+  </div><!-- /.entry-content -->
+
+  <ul class="pager">
+    {% if article.prev_article %}
+      <li class="previous"><a href="{{ SITEURL }}/{{ article.prev_article.url }}">&larr; {{ article.prev_article.title }}</a></li>
+    {% endif %}
+    {% if article.next_article %}
+      <li class="next"><a href="{{ SITEURL }}/{{ article.next_article.url }}">{{ article.next_article.title }} &rarr;</a></li>
+    {% endif %}
+  </ul>
+
 	{% if DISQUS_SITENAME %}
 	<div class="comments">
 	<h2>Comments !</h2>
