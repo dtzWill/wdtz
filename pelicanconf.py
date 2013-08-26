@@ -48,7 +48,7 @@ THEME = "bootstraped"
 
 DEFAULT_TRUNCATE = 500
 NON_GENERIC_BOOTSTRAP = "cyborg"
-EMAIL_ADDRESS = "wdietz2@uiuc.edu"
+EMAIL_ADDRESS_RECAPTCHA = "http://www.google.com/recaptcha/mailhide/d?k=01sjWttqALQwPoufFVhsbSgg==&c=O5DKj0E0KM4igqH2agQcbtZfhjmI7uQDXGZabETy5rI="
 
 # Typographic improvements
 # TYPOGRIFY = True

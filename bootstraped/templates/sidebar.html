@@ -27,8 +27,8 @@
 	{% endif %}
 	{% if SOCIAL %}
 	<li class="nav-header"><h4><i class="icon-home icon-large icon-fixed-width"></i> Social</h4></li>
-    {% if EMAIL_ADDRESS %}
-		<li><a href="mailto:{{ EMAIL_ADDRESS }}"><i class="icon-envelope icon-large icon-fixed-width"></i> Email</a></li>
+    {% if EMAIL_ADDRESS_RECAPTCHA %}
+		<li><a href="{{ EMAIL_ADDRESS_RECAPTCHA }}"><i class="icon-envelope icon-large icon-fixed-width"></i> Email</a></li>
     {% endif %}
 		{% for name, link in SOCIAL %}
       {% if name|lower == "facebook" %}
