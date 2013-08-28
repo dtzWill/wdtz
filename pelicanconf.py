@@ -59,3 +59,12 @@ SUMMARY_END_MARKER = "PELICAN_END_SUMMARY"
 
 PLUGIN_PATH = "/home/will/pelican-plugins"
 PLUGINS = ["neighbors", "summary", "optimize_images"]
+
+# Favicon support
+STATIC_PATHS = [
+    'extra/favicon.ico',
+]
+
+EXTRA_PATH_METADATA = {
+    'extra/favicon.ico' : { 'path' : 'favicon.ico' },
+}
