@@ -13,7 +13,6 @@ to enable dynamic selection of themes by the user.
 .. figure:: /images/bootswatch_theme_dropdown.png
    :alt: bootswatch theme dropdown
    :align: center
-   :figclass: text-center
 
    Bootswatch Theme Dropdown
 

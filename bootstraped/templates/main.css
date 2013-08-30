@@ -32,3 +32,16 @@ h3 a,
 h4 a {
   color: inherit;
 }
+
+.figure-wrapper {
+  text-align: center;
+}
+
+.figure {
+  display: inline-block;
+  border: 1px solid #bbb;
+  border-radius: 3px;
+  padding: 4px;
+  margin: 0 1em 1em 0;
+  box-shadow: 4px 4px 4px 0px rgba(128, 128, 128, 0.5);
+}
