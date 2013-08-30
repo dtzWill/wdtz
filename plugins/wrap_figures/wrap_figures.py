@@ -11,10 +11,10 @@ centering and use of display:inline-block.
 import logging
 from lxml import html
 from lxml.html import builder as E
+from lxml.html.clean import clean_html
 from copy import deepcopy
 
 from pelican import signals
-
 
 logger = logging.getLogger(__name__)
 
@@ -24,11 +24,17 @@ def add_figure_wrappers(content):
         return None
 
     tree = html.fromstring(content)
+    tree = clean_html(tree)
     for figure in tree.find_class("figure"):
         wrapped = E.DIV(E.CLASS("figure-wrapper"),
                         deepcopy(figure))
         tree.replace(figure, wrapped)
-    return html.tostring(tree).decode("utf-8")
+    res = html.tostring(tree).decode("utf-8")
+
+    # Blargh.  Rip out the outter div lxml adds to the html fragment.
+    if res.startswith("<div>") and res.endswith("</div>"):
+        res = res[5:-5]
+    return res
 
 
 def wrap_figures(instance):
