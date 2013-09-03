@@ -9,10 +9,7 @@ centering and use of display:inline-block.
 '''
 
 import logging
-from lxml import html
-from lxml.html import builder as E
-from lxml.html.clean import clean_html
-from copy import deepcopy
+from bs4 import BeautifulSoup
 
 from pelican import signals
 
@@ -23,19 +20,18 @@ def add_figure_wrappers(content):
     if content is None:
         return None
 
-    tree = html.fromstring(content)
-    tree = clean_html(tree)
-    for figure in tree.find_class("figure"):
-        wrapped = E.DIV(E.CLASS("figure-wrapper"),
-                        deepcopy(figure))
-        tree.replace(figure, wrapped)
-    res = html.tostring(tree).decode("utf-8")
+    soup = BeautifulSoup(content)
 
-    # Blargh.  Rip out the outter div lxml adds to the html fragment.
-    if res.startswith("<div>") and res.endswith("</div>"):
-        res = res[5:-5]
-    return res
+    for div in soup.findAll('div'):
+        if 'figure' in div['class']:
+            wrap = soup.new_tag('div')
+            wrap['class']="figure-wrapper"
 
+            # Replace with wrapper,
+            # and put figure inside (append)
+            wrap.append(div.replace_with(wrap))
+
+    return soup.decode()
 
 def wrap_figures(instance):
     '''
