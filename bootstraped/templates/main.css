@@ -44,4 +44,9 @@ h4 a {
   padding: 4px;
   margin: 0 1em 1em 0;
   box-shadow: 4px 4px 4px 0px rgba(128, 128, 128, 0.5);
+  max-width: 100%;
+}
+
+.figure img {
+  max-width: 100%;
 }
