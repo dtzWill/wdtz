@@ -62,8 +62,8 @@ optimizations can be useful (inferring loop bounds, removing
 impossible conditions, assertion inference), they can also
 cause unexpected and possibly dangerous behavior.  An
 example of this is the
-`undefined behavior bug in the latest binutils`_ I've
-written about previously.  By assuming pointer overflow
+`undefined behavior bug in the latest binutils <{filename}../integer/binutils.rst>`_
+I've written about previously.  By assuming pointer overflow
 cannot occur, the code crashes at runtime due to a removed
 "impossible" conditional expression.  Similar optimizations
 are performed by many compilers: a table of which compilers
@@ -110,7 +110,7 @@ and report any occurrences at runtime.
 Clang already has support for adding similar runtime checks
 for undefined behavior as part of ``-fsanitize=undefined``,
 the spiritual successor of our `IOC (Integer Overflow
-Checker)`_ project.  The new sanitizer is
+Checker) <{filename}../pages/proj/ioc.rst>`_ project.  The new sanitizer is
 called ``pointer-overflow``, and will be enabled as part of
 ``-fsanitize=undefined`` once these features are accepted
 upstream, bringing these important checks to the numerous
@@ -282,12 +282,10 @@ References
 .. target-notes::
 
 .. _ICSE12: http://www.cs.utah.edu/~regehr/papers/overflow12.pdf
-.. _undefined behavior bug in the latest binutils: |filename|/integer/binutils.rst
 .. _SOSP'13 paper: http://pdos.csail.mit.edu/papers/stack:sosp13.pdf
 .. _valgrind: http://valgrind.org/
 .. _asan: http://code.google.com/p/address-sanitizer/
 .. _SAFECode: http://safecode.cs.illinois.edu/
-.. _IOC (Integer Overflow Checker): |filename|/pages/proj/ioc.rst
 .. _GEP: http://llvm.org/docs/GetElementPtr.html
 .. _ASTVector: http://lists.cs.uiuc.edu/pipermail/cfe-commits/Week-of-Mon-20131028/091878.html
 
