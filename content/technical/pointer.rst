@@ -211,7 +211,7 @@ causing the overflow as shown in this excerpt from ``ftp.c``:
   char *bytes;
   bytes=strstr(buf, " bytes");
   if(bytes--) {
-    ...
+    // ...
   }
 
 Which overflows when the string "bytes" is not found and ``strstr`` returns
