@@ -23,6 +23,8 @@ regardless of intention (`ICSE12`_), pointer overflows are very unlikely
 to be intentional and may be the source of a more serious
 bug resulting in incorrect behavior or program crashing.
 
+PELICAN_END_SUMMARY
+
 Coming Soon To a Clang Near You
 -------------------------------
 
@@ -39,8 +41,6 @@ In the remainder of this post I describe the dangers
 of pointer overflow, why existing tools are not
 sufficient, and report results from running this tool
 on a number of open source applications.
-
-PELICAN_END_SUMMARY
 
 
 Why Pointer Overflow is Dangerous
