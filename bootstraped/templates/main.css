@@ -16,9 +16,12 @@
 
 
 
+
 footer {
 	background: inherit;
+  min-height: 0px!important;
 }
+
 
 .sidebar {
   padding-left: 20px;
