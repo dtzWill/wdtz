@@ -21,6 +21,8 @@ def add_figure_wrappers(content):
         return None
 
     soup = BeautifulSoup(content)
+    soup.html.unwrap()
+    soup.body.unwrap()
 
     for div in soup.findAll('div'):
         if 'figure' in div['class']:
