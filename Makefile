@@ -15,7 +15,7 @@ FTP_TARGET_DIR=/
 SSH_HOST=wdtz.org
 SSH_PORT=22
 SSH_USER=will
-SSH_TARGET_DIR=/var/www/htdocs
+SSH_TARGET_DIR=~/www/
 
 S3_BUCKET=my_s3_bucket
 
