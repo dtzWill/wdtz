@@ -18,7 +18,7 @@ Course project for CS525.
 Related
 -------
 
-`Project Page`_
+`GitHub Organization`_
 
 
 ---------------
@@ -28,4 +28,4 @@ References
 .. target-notes::
 
 .. _Eucalyptus: http://en.wikipedia.org/wiki/Eucalyptus_%28computing%29
-.. _Project Page: http://wdtz.org/cs525/
+.. _GitHub Organization: http://wdtz.org/cs525/

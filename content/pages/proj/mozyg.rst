@@ -14,7 +14,7 @@ Course project for CS523.
 Related
 -------
 
-`Project Page`_
+`GitHub Organization`_
 
 Slides_
 
@@ -27,6 +27,6 @@ References
 
 .. target-notes::
 
-.. _Project Page: http://wdtz.org/cs523/
+.. _GitHub Organization: http://wdtz.org/cs523/
 .. _Slides: http://wdtz.org/files/523-final-pdf.pdf
-.. _Final Report: http://wdtz.org/cs523/?p=misc.git;a=blob;f=final-report/final-report.pdf;hb=refs/tags/final_report
+.. _Final Report: https://github.com/mozyg/misc/raw/master/final-report/final-report.pdf
