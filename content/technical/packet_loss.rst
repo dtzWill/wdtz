@@ -13,7 +13,7 @@ and tackle it once and for all.
 
 Tracking down the source of the issue was an interesting
 adventure, and ultimately the problem was in the last
-place I thought to check: a pair of unmanaged
+place I thought to check: a pair of TEG-S80g unmanaged
 gigabit switches made by TRENDnet.
 
 **Do not buy!** :)
@@ -216,8 +216,8 @@ connection:
 A quick search suggests I'm not the only
 one experiencing packet loss issues with
 TRENDnet hardware, but nothing particularly
-conclusive.  One `reviewer`_ of the exact
-`faulty switches I purchased` did seem to
+conclusive.  One `reviewer`_ of the same
+`faulty switches I purchased`_ did seem to
 experience the same problem, but despite this the
 product has great reviews overall.  While it's
 possible I happened to get two from the same bad
