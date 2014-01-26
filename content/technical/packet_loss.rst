@@ -162,10 +162,10 @@ the switch to my router, which had no
 effect.  Similarly testing using that cable
 directly resolved the packet loss issue.
 Additionally this occurred regardless
-of the ports on the switch were used.
+which of the ports on the switch were used.
 
 Starting to suspect my switch was somehow
-to blame, I tried the same from an identical
+to blame, I tried the procedure from an identical
 switch in the living room.  Same results:
 packet loss when testing through the switch,
 none when testing using the cable leading
