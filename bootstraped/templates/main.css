@@ -6,6 +6,12 @@
   font-family: "Open Sans","Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
+/* Adjust anchors to compensate for top navbar */
+.reference {
+  padding-top: 60px;
+  margin-top: -60px;
+}
+
 .label {
 	margin-right: 10px;
 }
