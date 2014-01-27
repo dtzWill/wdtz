@@ -12,7 +12,7 @@
   <style>{% include "fonts.css" %}</style>
   <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
 	
-  <link href="//netdna.bootstrapcdn.com/bootswatch/3.0.0/cyborg/bootstrap.min.css" rel="stylesheet" title="main">
+  <link href="//netdna.bootstrapcdn.com/bootswatch/3.0.3/cyborg/bootstrap.min.css" rel="stylesheet" title="main">
 
   <style>{% include "main.css" %}</style>
 
@@ -136,7 +136,7 @@
 
   <!-- JS Libraries to Load -->
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-  <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
 
 
   {% if THEME_CHANGER %}
@@ -164,7 +164,7 @@
     jQuery(function($) {
         $('body').on('click', '.change-style-menu-item', function() {
           var theme_name = $(this).attr('rel');
-          var theme = "//netdna.bootstrapcdn.com/bootswatch/3.0.0/" + theme_name + "/bootstrap.min.css";
+          var theme = "//netdna.bootstrapcdn.com/bootswatch/3.0.3/" + theme_name + "/bootstrap.min.css";
           set_theme(theme);
         });
     });
