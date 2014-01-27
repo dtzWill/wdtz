@@ -121,7 +121,7 @@ received using `Wireshark`_.  Together with
 the server/client logs linked from the NetAlyzr
 results page, I determined the tool exchanges
 UDP packets every 20ms while running other
-tests.  This traffic communicate with their
+tests.  This traffic communicates with their
 server on the same port as other tests
 executed concurrently so it takes a little
 analysis for each capture to identify
