@@ -16,20 +16,10 @@
 	margin-right: 10px;
 }
 
-/*
-.nav-list li a {
-	color: rgb(85, 85, 85);
-}
-*/
-
-
-
-
 footer {
 	background: inherit;
   min-height: 0px!important;
 }
-
 
 .sidebar {
   padding-left: 20px;
@@ -44,6 +34,7 @@ h4 a {
   color: inherit;
 }
 
+/* CSS managing figures */
 .figure-wrapper {
   text-align: center;
 }
