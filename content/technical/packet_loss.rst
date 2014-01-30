@@ -2,7 +2,7 @@ Mysterious Lag Spikes and Faulty Switches
 #########################################
 
 :date: 2014-01-23 12:06
-:tags: network
+:tags: network, trendnet, switch, TEG-s80g
 
 My residential internet experience has always been poor, so
 when I started observing bizarre network behavior a few
