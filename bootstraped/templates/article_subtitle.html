@@ -1,8 +1,8 @@
-<i class="icon-calendar"></i> {{ article.locale_date }}
+<i class="fa fa-calendar"></i> {{ article.locale_date }}
 &nbsp;
-<i class="icon-time"></i> {{ article.date.strftime('%H:%M') }}
+<i class="fa fa-clock-o"></i> {{ article.date.strftime('%H:%M') }}
 &nbsp;in&nbsp;
-<i class="icon-folder-open icon-large icon-fixed-width"></i>
+<i class="fa fa-lg fa-fw fa-folder-open"></i>
 <a href="{{ SITEURL }}/{{ article.category.url }}">
   {{ article.category }}
 </a>

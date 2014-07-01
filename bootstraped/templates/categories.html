@@ -1,8 +1,14 @@
 {% extends "base.html" %}
 {% block content %}
 <ul>
+<li class="nav-header"><h4><i class="fa fa-lg fa-folder"></i> Categories</h4></li>
 {% for category, articles in categories %}
-	<li><a href="{{ category.url }}">{{ category }}</a></li>
+<li>
+  <a href="{{ category.url }}">
+    <i class="fa fa-lg fa-fw fa-folder-open"></i>
+    {{ category }}
+  </a>
+</li>
 {% endfor %}
 </ul>
 {% endblock %}

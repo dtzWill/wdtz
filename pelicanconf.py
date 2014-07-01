@@ -29,12 +29,12 @@ THEME_CHANGER = True
 
 # Social widget
 SOCIAL = (
-    ('Email', 'http://www.google.com/recaptcha/mailhide/d?k=01sjWttqALQwPoufFVhsbSgg==&c=O5DKj0E0KM4igqH2agQcbtZfhjmI7uQDXGZabETy5rI="', 'icon-envelope'),
-    ('Twitter', 'http://twitter.com/wdtz', 'icon-twitter'),
-    ('Github', 'http://github.com/dtzWill', 'icon-github'),
-    ('Facebook', 'http://facebook.com/dtzWill', 'icon-facebook-sign'),
-    ('Google-Plus', 'http://wdtz.org/+', 'icon-google-plus'),
-    ('##uiuc on Freenode', 'http://webchat.freenode.net/?channels=%23%23uiuc', 'icon-comment'),)
+    ('Email', 'http://www.google.com/recaptcha/mailhide/d?k=01sjWttqALQwPoufFVhsbSgg==&c=O5DKj0E0KM4igqH2agQcbtZfhjmI7uQDXGZabETy5rI="', 'fa-envelope'),
+    ('Twitter', 'http://twitter.com/wdtz', 'fa-twitter'),
+    ('Github', 'http://github.com/dtzWill', 'fa-github'),
+    ('Facebook', 'http://facebook.com/dtzWill', 'fa-facebook-square'),
+    ('Google-Plus', 'http://wdtz.org/+', 'fa-google-plus'),
+    ('##uiuc on Freenode', 'http://webchat.freenode.net/?channels=%23%23uiuc', 'fa-comment'),)
 
 DEFAULT_PAGINATION = 5
 DEFAULT_ORPHANS = 0

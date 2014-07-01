@@ -13,7 +13,7 @@
 
   <div class="well well-sm">
     <div class="pull-right">{% if article.tags %}
-      <i class="icon-tags icon-large"></i>
+      <i class="fa fa-lg fa-tags"></i>
       {% for tag in article.tags | sort %}
       <a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>{% if not loop.last %}, {% endif %}
       {% endfor %}
@@ -28,10 +28,10 @@
 
   <ul class="pager">
     {% if article.prev_article %}
-    <li class="previous"><a href="{{ SITEURL }}/{{ article.prev_article.url }}"><i class="icon-long-arrow-left"></i> {{ article.prev_article.title }}</a></li>
+    <li class="previous"><a href="{{ SITEURL }}/{{ article.prev_article.url }}"><i class="fa fa-long-arrow-left"></i> {{ article.prev_article.title }}</a></li>
     {% endif %}
     {% if article.next_article %}
-    <li class="next"><a href="{{ SITEURL }}/{{ article.next_article.url }}">{{ article.next_article.title }} <i class="icon-long-arrow-right"></i></a></li>
+    <li class="next"><a href="{{ SITEURL }}/{{ article.next_article.url }}">{{ article.next_article.title }} <i class="fa fa-long-arrow-right"></i></a></li>
     {% endif %}
   </ul>
 
