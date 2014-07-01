@@ -96,19 +96,15 @@
   </div>
 </div>
 <div class="container" id="content">
-	<div class="row">
-		<div class="col-md-13">
-			<div class="row">
-				<div class="col-md-offset-1 col-md-8">
-					{% block content %}
-					{% endblock content %}
-				</div>
-				<div class="col-md-3">
-					{% include 'sidebar.html' %}
-				</div>
-			</div>
-		</div>
-	</div>
+  <div class="row">
+    <div class="col-md-offset-1 col-md-8">
+      {% block content %}
+      {% endblock content %}
+    </div>
+    <div class="col-md-3">
+      {% include 'sidebar.html' %}
+    </div>
+  </div>
 </div>
 
 {% if GOOGLE_ANALYTICS %}
