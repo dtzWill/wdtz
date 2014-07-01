@@ -39,7 +39,7 @@ DEV_THEMES = [
 ]
 
 # Blogroll
-#LINKS =  (('Pelican', 'http://getpelican.com/'),
+# LINKS =  (('Pelican', 'http://getpelican.com/'),
 #          ('Python.org', 'http://python.org/'),
 #          ('Jinja2', 'http://jinja.pocoo.org/'),
 #          ('You can modify those links in your config file', '#'),)
@@ -85,6 +85,6 @@ STATIC_PATHS = [
 ]
 
 EXTRA_PATH_METADATA = {
-    'extra/favicon.ico' : { 'path' : 'favicon.ico' },
-    'images' : { 'path' : 'images' },
+    'extra/favicon.ico': {'path': 'favicon.ico'},
+    'images': {'path': 'images'},
 }
