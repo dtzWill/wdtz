@@ -86,14 +86,9 @@
       <li class="dropdown" id="theme-dropdown">
       <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-lg fa-cogs"></i> Theme<b class="caret"></b></a>
         <ul class="dropdown-menu">
-          <li><a href="#" class="change-style-menu-item" rel="cyborg"><i class="fa fa-fw fa-pencil"></i> Cyborg (Default)</a></li>
-          <li><a href="#" class="change-style-menu-item" rel="cerulean"><i class="fa fa-fw fa-pencil"></i> Cerulean</a></li>
-          <li><a href="#" class="change-style-menu-item" rel="cosmo"><i class="fa fa-fw fa-pencil"></i> Cosmo</a></li>
-          <li><a href="#" class="change-style-menu-item" rel="flatly"><i class="fa fa-fw fa-pencil"></i> Flatly</a></li>
-          <li><a href="#" class="change-style-menu-item" rel="journal"><i class="fa fa-fw fa-pencil"></i> Journal</a></li>
-          <li><a href="#" class="change-style-menu-item" rel="readable"><i class="fa fa-fw fa-pencil"></i> Readable</a></li>
-          <li><a href="#" class="change-style-menu-item" rel="slate"><i class="fa fa-fw fa-pencil"></i> Slate</a></li>
-          <li><a href="#" class="change-style-menu-item" rel="spacelab"><i class="fa fa-fw fa-pencil"></i> Spacelab</a></li>
+          {% for swatch in DEV_THEMES %}
+          <li><a href="#" class="change-style-menu-item" rel="{{ swatch }}"><i class="fa fa-fw fa-pencil"></i> {{ swatch }}</a></li>
+          {% endfor %}
         </ul>
       </li>
       {% endif %}
@@ -161,7 +156,7 @@
     /* When a theme-change item is selected, update theme */
     jQuery(function($) {
         $('body').on('click', '.change-style-menu-item', function() {
-          var theme_name = $(this).attr('rel');
+          var theme_name = $(this).attr('rel').toLowerCase();
           var theme = "//netdna.bootstrapcdn.com/bootswatch/3.2.0/" + theme_name + "/bootstrap.min.css";
           set_theme(theme);
         });

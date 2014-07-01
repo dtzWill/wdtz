@@ -21,6 +21,23 @@ FEED_RSS = None
 
 THEME_CHANGER = True
 
+DEV_THEMES = [
+    'Cerulean',
+    'Cosmo',
+    'Cyborg',
+    'Darkly',
+    'Flatly',
+    'Journal',
+    'Lumen',
+    'Readable',
+    'Simplex',
+    'Slate',
+    'Spacelab',
+    'Superhero',
+    'United',
+    'Yeti',
+]
+
 # Blogroll
 #LINKS =  (('Pelican', 'http://getpelican.com/'),
 #          ('Python.org', 'http://python.org/'),
