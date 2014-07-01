@@ -68,7 +68,7 @@ DEFAULT_TRUNCATE = 500
 NON_GENERIC_BOOTSTRAP = "cyborg"
 
 # Typographic improvements
-# TYPOGRIFY = True
+TYPOGRIFY = True
 
 TWITTER_USERNAME = "wdtz"
 
