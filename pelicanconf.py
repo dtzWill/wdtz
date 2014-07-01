@@ -46,7 +46,7 @@ DEV_THEMES = [
 
 # Social widget
 SOCIAL = (
-    ('Email', 'http://www.google.com/recaptcha/mailhide/d?k=01sjWttqALQwPoufFVhsbSgg==&c=O5DKj0E0KM4igqH2agQcbtZfhjmI7uQDXGZabETy5rI="', 'fa-envelope'),
+    ('Email', 'mailto:wdietz2@uiuc.edu', 'fa-envelope'),
     ('Twitter', 'http://twitter.com/wdtz', 'fa-twitter'),
     ('Github', 'http://github.com/dtzWill', 'fa-github'),
     ('Facebook', 'http://facebook.com/dtzWill', 'fa-facebook-square'),
