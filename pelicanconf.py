@@ -75,7 +75,7 @@ TWITTER_USERNAME = "wdtz"
 
 SUMMARY_END_MARKER = "PELICAN_END_SUMMARY"
 
-PLUGIN_PATH = "plugins"
+PLUGIN_PATHS = ["plugins"]
 PLUGINS = ["neighbors", "wrap_figures", "summary", "optimize_images"]
 
 
