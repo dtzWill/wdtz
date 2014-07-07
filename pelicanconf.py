@@ -68,8 +68,7 @@ DEFAULT_TRUNCATE = 500
 NON_GENERIC_BOOTSTRAP = "cyborg"
 
 # Typographic improvements
-# Disable since it attemps to insert CAPS span in title!
-# TYPOGRIFY = True
+TYPOGRIFY = True
 
 TWITTER_USERNAME = "wdtz"
 
