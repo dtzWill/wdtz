@@ -48,3 +48,7 @@ h4 a {
 .figure img {
   max-width: 100%;
 }
+
+.pre {
+  white-space: pre;
+}
