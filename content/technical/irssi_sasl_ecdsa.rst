@@ -190,22 +190,32 @@ If you try this method and have success, please report back.
 Closing Thoughts
 ================
 
-It seems the folks working on Atheme and Freenode are hard at work improving the services that are widely used in a variety of communities.  As part of this, they have deprecated DH-BLOWFISH due to potential performance and security concerns, but have yet to update their official instructions to describe how to use the new SASL mechanism.  They do mention in multiple places they hope to both document this thoroughly soon and to improve the workflow.
+It seems the folks working on Atheme and Freenode are hard at work improving
+the services that are widely used in a variety of communities.  As part of
+this, they have deprecated DH-BLOWFISH due to potential performance and
+security concerns, but have yet to update their official instructions to
+describe how to use the new SASL mechanism.  They do mention in multiple places
+they hope to both document this thoroughly soon and to improve the workflow.
+Huge thanks to those folks, and for offering all of this work for free for users
+like myself to enjoy.
 
-In the meantime, hopefully this helps my fellow IRC users.  enjoy! :)
+Additionally, all of this is arguably something an irc client should support natively
+or at least help facilitate.
+This is how some folks feel and have opened an issue
+on the `irssi github`_.
+
+Hope this helps, and let me know if you have any questions or issues.  Enjoy!
 
 
 References
 ==========
 .. target-notes::
 
-.. _Freenode upgraded to Atheme 7.2: http://blog.freenode.net/2014/11/atheme-7-2-and-freenode/
 .. _freenode: http://freenode.net/
-.. _irssi: http://irssi.org/
-.. _irssi SASL builtin issue: https://github.com/irssi/irssi/issues/4
 .. _SASL: http://en.wikipedia.org/wiki/Simple_Authentication_and_Security_Layer
-.. _UIUC Freenode: http://webchat.freenode.net/?channels=##uiuc
-.. _CertFP: https://freenode.net/certfp/
+.. _irssi: http://irssi.org/
+.. _Freenode upgraded to Atheme 7.2: http://blog.freenode.net/2014/11/atheme-7-2-and-freenode/
 .. _ecdsatool: https://github.com/atheme/ecdsatool
 .. _cap_sasl.pl git: https://raw.githubusercontent.com/atheme/atheme/master/contrib/cap_sasl.pl
+.. _irssi github: https://github.com/irssi/irssi/issues/4
 
