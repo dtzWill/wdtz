@@ -22,7 +22,7 @@ SHOW_OUTPUT = logger.getEffectiveLevel() <= logging.DEBUG
 # A list of file types with their respective commands
 COMMANDS = {
     # '.ext': ('command {flags} {filename', 'silent_flag', 'verbose_flag')
-    '.jpg': ('jpegtran {flags} -copy none -optimize -outfile "{filename}" "{filename}"', '', '-v'),
+    '.jpg': ('jpegtran {flags} -copy none -progressive -optimize -outfile "{filename}" "{filename}"', '', '-v'),
     '.png': ('optipng {flags} "{filename}"', '--quiet', ''),
 }
 
