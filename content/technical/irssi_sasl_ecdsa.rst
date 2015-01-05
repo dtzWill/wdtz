@@ -1,0 +1,211 @@
+Freenode SASL Upgrade: Irssi HOWTO
+##################################
+
+:date: 2015-01-05 12:25
+:tags: irssi, sasl, freenode, irc, network, guide
+
+:status: draft
+
+The freenode_ IRC network has for a long time supported
+connecting and automatic identification using SASL_.
+
+Recently, the freenode network deprecated the commonly used
+SASL mechanism DH-BLOWFISH due to security concerns, causing
+my client (irssi_) to no longer be able to authenticate.
+
+Unfortunately, while scripts and guides describing
+using irssi with DH-BLOWFISH are plentiful, it seems
+the steps required to use the new preferred
+ECDSA-NIST256P-CHALLENGE method are not yet documented.
+
+Read on for a step-by-step walkthrough of configuring
+irssi to use SASL with freenode in 2015.
+
+PELICAN_END_SUMMARY
+
+Background
+==========
+
+Recently `Freenode upgraded to Atheme 7.2`_, and in the
+process deprecated support for the SASL mechanism
+DH-BLOWFISH.
+
+I'll start by saying the simplest solution to this is to
+connect over SSL and use SASL PLAIN instead of DH-BLOWFISH.
+Clients configured in this way will work with the new
+services just like they did before, and will have similar
+security properties as long as the client checks the
+server's certificate.
+
+That established, use of DH-BLOWFISH with SASL is prevalent
+regardless and is useful when connecting to services without
+SSL.
+Additionally, use of a mechanism other than PLAIN may have
+advantages in a defense-in-depth sort of way, should the SSL
+stream be compromised in some manner.
+
+Configuring Irssi to use ECDSA-NIST256p-CHALLENGE
+=================================================
+
+1) Install ecdsatool
+--------------------
+
+First, download and build a copy of ecdsatool_.
+This wasn't available as a package for my server's
+distribution, so I built is as follows:
+
+.. code-block:: sh
+
+  $ git clone https://github.com/atheme/ecdsatool.git
+  $ cd ecdsatool
+  $ ./autogen.sh
+  $ ./configure --prefix=$HOME/local
+  $ make -j
+  $ make install
+
+Standard build recipe, tweak as you see fit.
+
+Afterwards, be sure the resulting ``ecdsatool`` utility is
+available on your shell's ``PATH`` so the perl script will
+be able to find and use it.
+
+2) Generate keypair
+-------------------
+
+Next, use ``ecdsatool`` to generate a keypair for SASL use:
+
+.. code-block:: sh
+
+  $ mkdir -p ~/.irssi/certs
+  $ ecdsatool keygen ~/.irssi/certs/freenode.pem
+
+I keep my IRC-related certificates in ``~/.irssi/certs``,
+personal preference.
+
+3) Install cap_sasl script
+--------------------------
+
+Next, grab a copy of the ``cap_sasl.pl`` script shipped
+in the ecdsatool repository:
+
+.. code-block:: sh
+
+  $ mkdir -p ~/.irssi/scripts
+  $ wget https://raw.githubusercontent.com/atheme/ecdsatool/master/cap_sasl.pl -O ~/.irssi/scripts/cap_sasl.pl
+
+Additionally you likely want to have the script loaded when
+irssi starts:
+
+.. code-block:: sh
+
+  $ mkdir -p ~/.irssi/scripts/autorun
+  $ ln -s ../cap_sasl.pl ~/.irssi/scripts/autorun/
+
+4) Configure SASL for Freenode
+------------------------------
+
+From within irssi, use the ``/sasl set`` command to indicate
+what username and certificate to use for your irc network:
+
+.. code-block:: sh
+
+  $ irssi
+  ...
+  /sasl set freenode username /full/path/to/freenode.pem ECDSA-NIST256P-CHALLENGE
+
+Replacing ``freenode`` with the network name your configured
+in irssi, ``username`` with your Freenode account name, and
+the path with a full path to the keypair generated earlier.
+
+Afterwards, be sure to save this information for future use:
+
+.. code-block:: sh
+
+  /sasl save
+
+The result should be an entry in ``~/.irssi/sasl.auth`` that looks something like this:
+
+.. code-block:: plain
+
+  freenode dtzWill /home/will/.irssi/certs/freenode.pem ECDSA-NIST256P-CHALLENGE
+
+
+5) Register Public Key with NickServ
+------------------------------------
+
+Almost there! Final step is to give NickServ the public key
+portion of our keypair so it can recognize your client and
+associate it with your account.
+
+First, grab the pubkey from the keypair:
+
+.. code-block:: sh
+
+  $ ecdsatool pubkey ~/.irssi/certs/freenode.pem
+
+Next, connect to Freenode and identify yourself as you would usually.
+
+Finally, tell NickServ about your public key:
+
+.. code-block:: plain
+
+  /msg nickserv set property pubkey ArRZ4XCwSFYhT7RH5Ms7dosJEm8OYLO3gWSSGQCsYOCk
+
+
+Replacing the example public key with what was printed by ``ecdsatool`` in the previous step.
+
+6) Done! Reconnect and Test
+---------------------------
+
+At this point you have all the pieces required to use SASL with the ECDSA-NIST256P-CHALLENGE mechanism
+to connect to Freenode.  Disconnect from Freenode and reconnect to try it out!
+
+If successful, you should see something like this:
+
+.. code-block:: plain
+
+  14:50 -!- Irssi: CLICAP: supported by server: account-notify extended-join identify-msg multi-prefix sasl
+  14:50 -!- Irssi: CLICAP: requesting: multi-prefix sasl
+  14:50 -!- Irssi: CLICAP: now enabled: multi-prefix sasl
+  14:50 -!- will!will@unaffiliated/dtzwill dtzWill You are now logged in as dtzWill.
+  14:50 -!- Irssi: SASL authentication successful
+
+Alternative Method Without ecdsatool
+====================================
+
+It appears that there is another solution that does not require the use of an external
+tool like ``ecdsatool`` by using the ``Crypt::PK::ECC`` perl module.
+
+This script is available in the Atheme git repository: `cap_sasl.pl git`_.
+In addition to no longer requiring an external tool, the script offers
+a ``keygen`` command that should make setup easier.
+
+I haven't tried this script yet myself, as I didn't discover it until
+well after I completed the procedure described above.
+Additionally, the module is uses doesn't seem to be available as a package
+on any of my systems although it can of course be obtained using ``cpan``.
+
+If you try this method and have success, please report back.
+
+Closing Thoughts
+================
+
+It seems the folks working on Atheme and Freenode are hard at work improving the services that are widely used in a variety of communities.  As part of this, they have deprecated DH-BLOWFISH due to potential performance and security concerns, but have yet to update their official instructions to describe how to use the new SASL mechanism.  They do mention in multiple places they hope to both document this thoroughly soon and to improve the workflow.
+
+In the meantime, hopefully this helps my fellow IRC users.  enjoy! :)
+
+
+References
+==========
+.. target-notes::
+
+.. _Freenode upgraded to Atheme 7.2: http://blog.freenode.net/2014/11/atheme-7-2-and-freenode/
+.. _freenode: http://freenode.net/
+.. _irssi: http://irssi.org/
+.. _irssi SASL builtin issue: https://github.com/irssi/irssi/issues/4
+.. _SASL: http://en.wikipedia.org/wiki/Simple_Authentication_and_Security_Layer
+.. _UIUC Freenode: http://webchat.freenode.net/?channels=##uiuc
+.. _CertFP: https://freenode.net/certfp/
+.. _ecdsatool: https://github.com/atheme/ecdsatool
+.. _cap_sasl.pl git: https://raw.githubusercontent.com/atheme/atheme/master/contrib/cap_sasl.pl
+
