@@ -11,7 +11,7 @@ connecting and automatic identification using SASL_.
 
 Recently, the freenode network deprecated the commonly used
 SASL mechanism DH-BLOWFISH due to security concerns, causing
-my client (irssi_) to no longer be able to authenticate.
+my IRC client (irssi_) to no longer be able to authenticate.
 
 Unfortunately, while scripts and guides describing
 using irssi with DH-BLOWFISH are plentiful, it seems
@@ -23,26 +23,65 @@ irssi to use SASL with freenode in 2015.
 
 PELICAN_END_SUMMARY
 
-Background
-==========
+Problem
+=======
 
-Recently `Freenode upgraded to Atheme 7.2`_, and in the
+Recently `freenode upgraded to Atheme 7.2`_, and in the
 process deprecated support for the SASL mechanism
 DH-BLOWFISH.
+Atheme is the reference implementation of the current IRC
+protocol, which `deprecates DH-BLOWFISH in IRCv3`_.
 
-I'll start by saying the simplest solution to this is to
-connect over SSL and use SASL PLAIN instead of DH-BLOWFISH.
+Motivation, Possible Questions
+==============================
+
+Why not PLAIN?
+--------------
+
+I'd be remiss if I didn't mention that the simplest solution
+is to use the ``PLAIN`` SASL method in conjunction with SSL.
 Clients configured in this way will work with the new
-services just like they did before, and will have similar
-security properties as long as the client checks the
-server's certificate.
+services just like they have previously, with similar
+security properties.
 
-That established, use of DH-BLOWFISH with SASL is prevalent
-regardless and is useful when connecting to services without
-SSL.
-Additionally, use of a mechanism other than PLAIN may have
-advantages in a defense-in-depth sort of way, should the SSL
-stream be compromised in some manner.
+While it is not my goal to convince you ``PLAIN`` is
+insufficient, there is benefit in using a SASL method other
+than ``PLAIN`` in a defense-in-depth sort of way.  Should
+the SSL stream become compromised in some manner, ``PLAIN``
+would make obtaining a user's password as easy as forcing a
+reconnect, while the other mechanisms provide additional
+layers of security.
+
+Use SSL!
+--------
+Regardless of the SASL method being used, if you're
+bothering with any of this the first and most effective step
+to securing your IRC connection is using SSL.
+SSL is supported by virtually all IRC networks and requires
+only trivial configuration in most clients.
+
+Finally, make sure your client validates the server's
+certificate or much of the benefits of using SSL are lost.
+See your client's documentation for more on how to do this.
+
+Why SASL in addition to SSL
+---------------------------
+
+Common implementations make SASL beneficial as it enables
+the services to recognize you before you even are active on
+the network, which can be useful when making use of services
+like vhost or automatically joining channels only open to
+invited accounts.
+
+As an aside, as far as I can tell client-side certificates
+(like those used with CertFP_ identification) could be used
+to provide similar benefits but this doesn't seem to be done
+on any network I use.  I don't believe CertFP would work
+over Tor, so perhaps the implementation focuses on what
+works for all users.
+
+Additionally,
+`freenode requires SASL when connecting over Tor`_.
 
 Configuring Irssi to use ECDSA-NIST256p-CHALLENGE
 =================================================
@@ -101,7 +140,7 @@ irssi starts:
   $ mkdir -p ~/.irssi/scripts/autorun
   $ ln -s ../cap_sasl.pl ~/.irssi/scripts/autorun/
 
-4) Configure SASL for Freenode
+4) Configure SASL for freenode
 ------------------------------
 
 From within irssi, use the ``/sasl set`` command to indicate
@@ -114,7 +153,7 @@ what username and certificate to use for your irc network:
   /sasl set freenode username /full/path/to/freenode.pem ECDSA-NIST256P-CHALLENGE
 
 Replacing ``freenode`` with the network name your configured
-in irssi, ``username`` with your Freenode account name, and
+in irssi, ``username`` with your freenode account name, and
 the path with a full path to the keypair generated earlier.
 
 Afterwards, be sure to save this information for future use:
@@ -143,7 +182,7 @@ First, grab the pubkey from the keypair:
 
   $ ecdsatool pubkey ~/.irssi/certs/freenode.pem
 
-Next, connect to Freenode and identify yourself as you would usually.
+Next, connect to freenode and identify yourself as you would usually.
 
 Finally, tell NickServ about your public key:
 
@@ -158,7 +197,7 @@ Replacing the example public key with what was printed by ``ecdsatool`` in the p
 ---------------------------
 
 At this point you have all the pieces required to use SASL with the ECDSA-NIST256P-CHALLENGE mechanism
-to connect to Freenode.  Disconnect from Freenode and reconnect to try it out!
+to connect to freenode.  Disconnect from freenode and reconnect to try it out!
 
 If successful, you should see something like this:
 
@@ -190,7 +229,7 @@ If you try this method and have success, please report back.
 Closing Thoughts
 ================
 
-It seems the folks working on Atheme and Freenode are hard at work improving
+It seems the folks working on Atheme and freenode are hard at work improving
 the services that are widely used in a variety of communities.  As part of
 this, they have deprecated DH-BLOWFISH due to potential performance and
 security concerns, but have yet to update their official instructions to
@@ -214,7 +253,10 @@ References
 .. _freenode: http://freenode.net/
 .. _SASL: http://en.wikipedia.org/wiki/Simple_Authentication_and_Security_Layer
 .. _irssi: http://irssi.org/
-.. _Freenode upgraded to Atheme 7.2: http://blog.freenode.net/2014/11/atheme-7-2-and-freenode/
+.. _freenode upgraded to Atheme 7.2: http://blog.freenode.net/2014/11/atheme-7-2-and-freenode/
+.. _deprecates DH-BLOWFISH in IRCv3: http://ircv3.atheme.org/documentation/sasl-dh-blowfish
+.. _freenode requires SASL when connecting over Tor: https://freenode.net/irc_servers.shtml#tor
+.. _CertFP: https://freenode.net/certfp/
 .. _ecdsatool: https://github.com/atheme/ecdsatool
 .. _cap_sasl.pl git: https://raw.githubusercontent.com/atheme/atheme/master/contrib/cap_sasl.pl
 .. _irssi github: https://github.com/irssi/irssi/issues/4
