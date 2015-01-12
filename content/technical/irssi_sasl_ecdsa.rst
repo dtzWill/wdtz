@@ -4,8 +4,6 @@ Freenode SASL Upgrade: Irssi HOWTO
 :date: 2015-01-05 12:25
 :tags: irssi, sasl, freenode, irc, network, guide
 
-:status: draft
-
 The freenode_ IRC network has for a long time supported
 connecting and automatic identification using SASL_.
 
