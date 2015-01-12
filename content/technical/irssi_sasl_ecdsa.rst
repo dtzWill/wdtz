@@ -10,21 +10,22 @@ The freenode_ IRC network has for a long time supported
 connecting and automatic identification using SASL_.
 
 Recently, the freenode network deprecated the commonly used
-SASL mechanism DH-BLOWFISH due to security concerns, causing
-my IRC client (irssi_) to no longer be able to authenticate.
+SASL mechanism ``DH-BLOWFISH`` due to security concerns,
+causing my IRC client (irssi_) to no longer be able to
+authenticate.
 
-Unfortunately, while scripts and guides describing
-using irssi with DH-BLOWFISH are plentiful, it seems
-the steps required to use the new preferred
-ECDSA-NIST256P-CHALLENGE method are not yet documented.
+Unfortunately, while scripts and guides describing using
+irssi with ``DH-BLOWFISH`` are plentiful, it seems the steps
+required to use the new preferred
+``ECDSA-NIST256P-CHALLENGE`` method are not yet documented.
 
 Read on for a step-by-step walkthrough of configuring
 irssi to use SASL with freenode in 2015.
 
 PELICAN_END_SUMMARY
 
-Problem
-=======
+Background
+==========
 
 Recently `freenode upgraded to Atheme 7.2`_, and in the
 process deprecated support for the SASL mechanism
@@ -32,17 +33,18 @@ DH-BLOWFISH.
 Atheme is the reference implementation of the current IRC
 protocol, which `deprecates DH-BLOWFISH in IRCv3`_.
 
-Motivation, Possible Questions
-==============================
+There are good reasons for this change, but regardless it's
+been done and irssi needs some help accomodating this
+change.
 
 Why not PLAIN?
 --------------
 
-I'd be remiss if I didn't mention that the simplest solution
-is to use the ``PLAIN`` SASL method in conjunction with SSL.
-Clients configured in this way will work with the new
-services just like they have previously, with similar
-security properties.
+It would be remiss not to mention that the simplest solution
+to this problem is to use the ``PLAIN`` SASL method in
+conjunction with SSL.  Clients configured in this way will
+work with the new services just like they have previously,
+with similar security properties.
 
 While it is not my goal to convince you ``PLAIN`` is
 insufficient, there is benefit in using a SASL method other
@@ -60,28 +62,32 @@ to securing your IRC connection is using SSL.
 SSL is supported by virtually all IRC networks and requires
 only trivial configuration in most clients.
 
-Finally, make sure your client validates the server's
-certificate or much of the benefits of using SSL are lost.
-See your client's documentation for more on how to do this.
+Be sure your client validates the server's certificate
+properly (strict SSL) or your connection is trivially
+vulnerable to MITM attacks.
 
 Why SASL in addition to SSL
 ---------------------------
 
-Common implementations make SASL beneficial as it enables
-the services to recognize you before you even are active on
-the network, which can be useful when making use of services
+Common implementations give SASL users one benefit not
+generally available to other users: with SASL, network
+services recognize you before you even are active on the
+network, which can be useful when making use of services
 like vhost or automatically joining channels only open to
 invited accounts.
 
 As an aside, as far as I can tell client-side certificates
 (like those used with CertFP_ identification) could be used
 to provide similar benefits but this doesn't seem to be done
-on any network I use.  I don't believe CertFP would work
-over Tor, so perhaps the implementation focuses on what
-works for all users.
+on any network I'm familiar with.
+One possible explanation is that since CertFP doesn't work
+with Tor (I believe), implementation was added for SASL
+which is available for all users.
 
-Additionally,
-`freenode requires SASL when connecting over Tor`_.
+Other reasons include additional layers of security
+in terms of protecting the account password, and policies
+such as
+`freenode's requirement of SASL when connecting over Tor`_.
 
 Configuring Irssi to use ECDSA-NIST256p-CHALLENGE
 =================================================
@@ -105,8 +111,8 @@ distribution, so I built is as follows:
 Standard build recipe, tweak as you see fit.
 
 Afterwards, be sure the resulting ``ecdsatool`` utility is
-available on your shell's ``PATH`` so the perl script will
-be able to find and use it.
+available on your shell's ``PATH`` so the irssi script we
+configure later will be able to find and use it.
 
 2) Generate keypair
 -------------------
@@ -255,8 +261,8 @@ References
 .. _irssi: http://irssi.org/
 .. _freenode upgraded to Atheme 7.2: http://blog.freenode.net/2014/11/atheme-7-2-and-freenode/
 .. _deprecates DH-BLOWFISH in IRCv3: http://ircv3.atheme.org/documentation/sasl-dh-blowfish
-.. _freenode requires SASL when connecting over Tor: https://freenode.net/irc_servers.shtml#tor
 .. _CertFP: https://freenode.net/certfp/
+.. _freenode's requirement of SASL when connecting over Tor: https://freenode.net/irc_servers.shtml#tor
 .. _ecdsatool: https://github.com/atheme/ecdsatool
 .. _cap_sasl.pl git: https://raw.githubusercontent.com/atheme/atheme/master/contrib/cap_sasl.pl
 .. _irssi github: https://github.com/irssi/irssi/issues/4
