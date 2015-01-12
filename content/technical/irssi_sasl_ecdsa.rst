@@ -19,7 +19,7 @@ irssi with ``DH-BLOWFISH`` are plentiful, it seems the steps
 required to use the new preferred
 ``ECDSA-NIST256P-CHALLENGE`` method are not yet documented.
 
-Read on for a step-by-step walkthrough of configuring
+Read on for a step-by-step walk-through of configuring
 irssi to use SASL with freenode in 2015.
 
 PELICAN_END_SUMMARY
@@ -29,12 +29,12 @@ Background
 
 Recently `freenode upgraded to Atheme 7.2`_, and in the
 process deprecated support for the SASL mechanism
-DH-BLOWFISH.
+``DH-BLOWFISH``.
 Atheme is the reference implementation of the current IRC
 protocol, which `deprecates DH-BLOWFISH in IRCv3`_.
 
 There are good reasons for this change, but regardless it's
-been done and irssi needs some help accomodating this
+been done and irssi needs some help accommodating this
 change.
 
 Why not PLAIN?
@@ -64,7 +64,7 @@ only trivial configuration in most clients.
 
 Be sure your client validates the server's certificate
 properly (strict SSL) or your connection is trivially
-vulnerable to MITM attacks.
+vulnerable to MITM_ attacks.
 
 Why SASL in addition to SSL
 ---------------------------
@@ -73,20 +73,19 @@ Common implementations give SASL users one benefit not
 generally available to other users: with SASL, network
 services recognize you before you even are active on the
 network, which can be useful when making use of services
-like vhost or automatically joining channels only open to
-invited accounts.
+like a hostname cloak or automatically joining channels only
+open to invited accounts.
 
 As an aside, as far as I can tell client-side certificates
 (like those used with CertFP_ identification) could be used
 to provide similar benefits but this doesn't seem to be done
 on any network I'm familiar with.
 One possible explanation is that since CertFP doesn't work
-with Tor (I believe), implementation was added for SASL
-which is available for all users.
+with Tor (I believe?), implementation efforts focus on SASL
+which is available to all users.
 
-Other reasons include additional layers of security
-in terms of protecting the account password, and policies
-such as
+Other reasons include additional layers of security in terms
+of protecting the account password, and policies such as
 `freenode's requirement of SASL when connecting over Tor`_.
 
 Configuring Irssi to use ECDSA-NIST256p-CHALLENGE
@@ -114,10 +113,10 @@ Afterwards, be sure the resulting ``ecdsatool`` utility is
 available on your shell's ``PATH`` so the irssi script we
 configure later will be able to find and use it.
 
-2) Generate keypair
--------------------
+2) Generate key pair
+--------------------
 
-Next, use ``ecdsatool`` to generate a keypair for SASL use:
+Next, use ``ecdsatool`` to generate a key pair for SASL use:
 
 .. code-block:: sh
 
@@ -150,7 +149,7 @@ irssi starts:
 ------------------------------
 
 From within irssi, use the ``/sasl set`` command to indicate
-what username and certificate to use for your irc network:
+what username and certificate to use for your IRC network:
 
 .. code-block:: sh
 
@@ -160,7 +159,7 @@ what username and certificate to use for your irc network:
 
 Replacing ``freenode`` with the network name your configured
 in irssi, ``username`` with your freenode account name, and
-the path with a full path to the keypair generated earlier.
+the path with a full path to the key pair generated earlier.
 
 Afterwards, be sure to save this information for future use:
 
@@ -179,10 +178,10 @@ The result should be an entry in ``~/.irssi/sasl.auth`` that looks something lik
 ------------------------------------
 
 Almost there! Final step is to give NickServ the public key
-portion of our keypair so it can recognize your client and
+portion of our key pair so it can recognize your client and
 associate it with your account.
 
-First, grab the pubkey from the keypair:
+First, grab the ``pubkey`` from the key pair:
 
 .. code-block:: sh
 
@@ -202,8 +201,10 @@ Replacing the example public key with what was printed by ``ecdsatool`` in the p
 6) Done! Reconnect and Test
 ---------------------------
 
-At this point you have all the pieces required to use SASL with the ECDSA-NIST256P-CHALLENGE mechanism
-to connect to freenode.  Disconnect from freenode and reconnect to try it out!
+At this point you have all the pieces required to use SASL
+with the ``ECDSA-NIST256P-CHALLENGE`` mechanism to connect
+to freenode.
+Disconnect from freenode and reconnect to try it out!
 
 If successful, you should see something like this:
 
@@ -218,34 +219,40 @@ If successful, you should see something like this:
 Alternative Method Without ecdsatool
 ====================================
 
-It appears that there is another solution that does not require the use of an external
-tool like ``ecdsatool`` by using the ``Crypt::PK::ECC`` perl module.
+It appears that there is another solution that does not
+require the use of an external tool like ``ecdsatool`` by
+using the ``Crypt::PK::ECC`` perl module.
 
-This script is available in the Atheme git repository: `cap_sasl.pl git`_.
-In addition to no longer requiring an external tool, the script offers
-a ``keygen`` command that should make setup easier.
+This script is available in the Atheme git repository:
+`cap_sasl.pl git`_.
+In addition to no longer requiring an external tool, the
+script offers a ``keygen`` command that should make setup
+easier.
 
-I haven't tried this script yet myself, as I didn't discover it until
-well after I completed the procedure described above.
-Additionally, the module is uses doesn't seem to be available as a package
-on any of my systems although it can of course be obtained using ``cpan``.
+I haven't tried this script yet myself, as I didn't discover
+it until well after I completed the procedure described
+above.
+Additionally, the module is uses doesn't seem to be
+available as a package on any of my systems although it can
+of course be obtained using cpan_.
 
 If you try this method and have success, please report back.
 
 Closing Thoughts
 ================
 
-It seems the folks working on Atheme and freenode are hard at work improving
-the services that are widely used in a variety of communities.  As part of
-this, they have deprecated DH-BLOWFISH due to potential performance and
-security concerns, but have yet to update their official instructions to
-describe how to use the new SASL mechanism.  They do mention in multiple places
-they hope to both document this thoroughly soon and to improve the workflow.
-Huge thanks to those folks, and for offering all of this work for free for users
-like myself to enjoy.
+It seems the folks working on Atheme and freenode are hard
+at work improving the services that are widely used in a
+variety of communities.
+While this post is motivated by a lack of documentation, the
+procedure is simple and it has been mentioned in multiple
+places time that they hope to both document this thoroughly
+soon and to improve the workflow for users.
+Huge thanks to those folks, and for offering all of this
+work for free for users like myself to enjoy.
 
-Additionally, all of this is arguably something an irc client should support natively
-or at least help facilitate.
+Additionally, all of this is arguably something an IRC
+client should support natively or at least help facilitate.
 This is how some folks feel and have opened an issue
 on the `irssi github`_.
 
@@ -261,9 +268,11 @@ References
 .. _irssi: http://irssi.org/
 .. _freenode upgraded to Atheme 7.2: http://blog.freenode.net/2014/11/atheme-7-2-and-freenode/
 .. _deprecates DH-BLOWFISH in IRCv3: http://ircv3.atheme.org/documentation/sasl-dh-blowfish
+.. _MITM: http://en.wikipedia.org/wiki/Man-in-the-middle_attack
 .. _CertFP: https://freenode.net/certfp/
 .. _freenode's requirement of SASL when connecting over Tor: https://freenode.net/irc_servers.shtml#tor
 .. _ecdsatool: https://github.com/atheme/ecdsatool
 .. _cap_sasl.pl git: https://raw.githubusercontent.com/atheme/atheme/master/contrib/cap_sasl.pl
+.. _cpan: http://www.cpan.org/
 .. _irssi github: https://github.com/irssi/irssi/issues/4
 
