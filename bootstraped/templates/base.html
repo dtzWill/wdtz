@@ -125,6 +125,30 @@
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 
+  <script>
+// JS to fix anchors with fixed-nav:
+// Based on: https://github.com/bkuhn/copyleft-tutorial/commit/476a42bf0d737e13a561dbaf6f4e1e91a333e80d
+$(window).load(function () {
+  /*
+   * Scroll the window to avoid the topnav bar
+   * https://github.com/twitter/bootstrap/issues/1768
+   */
+  if ($(".navbar-fixed-top").length > 0) {
+    var navHeight = $(".navbar").height(),
+      shiftWindow = function() {
+        var ourURL = document.URL;
+        if ( (ourURL.search("#id") > 0)) {
+          scrollBy(0, -navHeight - 5);
+        }
+      };
+    if (location.hash) {
+      setTimeout(shiftWindow, 1);
+    }
+    window.addEventListener("hashchange", shiftWindow);
+  }
+});
+</script>
+
 
   {% if THEME_CHANGER %}
   <!-- Theme changing function -->
