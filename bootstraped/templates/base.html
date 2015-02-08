@@ -8,15 +8,16 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link href="{{ SITEURL }}//favicon.ico" rel="icon" type="image/x-icon" />
-	
-  <style>{% include "fonts.css" %}</style>
-  <link href="{{ SITEURL }}/theme/font-awesome-4.3.0/css/font-awesome.min.css" rel="stylesheet">
-  <link href="{{ SITEURL }}/theme/css/bootstrap.min.css" rel="stylesheet" title="main">
 
-  <style>{% include "main.css" %}</style>
+  <link href="{{ SITEURL }}/theme/font-awesome-4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href="{{ SITEURL }}/theme/css/bootstrap.min.css" rel="stylesheet" type="text/css" {% if THEME_CHANGER %}title="main"{% endif %}>
 
   <!-- Code highlighting -->
-	<link rel="stylesheet" href="{{ SITEURL }}/theme/css/pygment.css" type="text/css">
+  <link href="{{ SITEURL }}/theme/css/pygment.css" rel="stylesheet" type="text/css">
+
+  <style>{% include "fonts.css" %}</style>
+  <style>{% include "main.css" %}</style>
+
 	
 	<!-- Feed Information / Copied from Simple Theme -->
 	{% if FEED_ALL_ATOM %}
