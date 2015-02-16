@@ -61,6 +61,16 @@ h4 a {
   word-break: break-all;
 }
 
+code {
+  /* Override bootswatch 'code' stylings */
+  padding: 0;
+  font-size: 90%;
+  color: inherit;
+  white-space: nowrap;
+  background-color: transparent;
+  border-radius: 0;
+}
+
 .highlight,code,pre,kbd,samp{
   font-family: "Source Code Pro","Consolas","Menlo","Monaco","Courier New",monospace;
 }
