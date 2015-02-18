@@ -75,7 +75,7 @@ TWITTER_USERNAME = "wdtz"
 SUMMARY_END_MARKER = "PELICAN_END_SUMMARY"
 
 PLUGIN_PATHS = ["plugins"]
-PLUGINS = ["neighbors", "wrap_figures", "replace_tt", "summary", "optimize_images"]
+PLUGINS = ["neighbors", "wrap_figures", "replace_tt", "summary", "remove_summary_footnotes", "optimize_images"]
 
 
 # Favicon support
