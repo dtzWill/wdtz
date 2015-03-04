@@ -236,6 +236,22 @@ of course be obtained using cpan_.
 
 If you try this method and have success, please report back.
 
+(Update: March 03, 2015)
+------------------------
+
+Jesper Freesbug from the comments was kind enough to share
+his experiences and provide a walkthrough of the setup
+process when using this approach.  I've featured this
+comment below and recommend taking a look if you're
+interested in this solution.
+
+In addition to the FreeBSD package he mentions, it seems
+other systems also provide the required perl module as part
+of a ``cryptx`` package.  For example, on Arch it's
+available as an AUR package named ``perl-cryptx``.
+Hopefully the module is made more universally available in
+the future.
+
 Closing Thoughts
 ================
 
