@@ -1,10 +1,10 @@
 About
 #####
 
-:date: 2013-08-18
+:date: 2015-03-19
 :slug: about
 
-I'm currently a Ph.D candidate at UIUC_, studying `Computer Science`_ under `Vikram Adve`_ with high-level interests of Compilers and Systems.
+I'm a Ph.D student at UIUC_, studying `Computer Science`_ under `Vikram Adve`_ with high-level interests of Compilers and Systems.
 
 Research Interests
 ------------------
