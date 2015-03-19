@@ -99,3 +99,7 @@ code {
   background: inherit;
   margin-left: 20px;
 }
+
+.field-name {
+  padding-right: 10px;
+}
