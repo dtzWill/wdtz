@@ -84,3 +84,18 @@ code {
   word-wrap: break-word; /* Internet Explorer 5.5+ */
   word-break: break-all;
 }
+
+.topic-title {
+  color: #FFF;
+  font-size: 110%;
+  padding-top: 10px;
+}
+
+.topic table {
+  color: inherit;
+}
+
+.field-list {
+  background: inherit;
+  margin-left: 20px;
+}
