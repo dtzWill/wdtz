@@ -26,7 +26,7 @@ Publications
   :Authors: Nathan Dautenhahn, Theodoros Kasampalis, Will Dietz, John Criswell, Vikram Adve
   :Published: Proc. of the 2015 International Conference on Architectural Support for Programming Languages and Operating Systems (`ASPLOS'15`_)
   :Where: Istanbul, Turkey
-  :WWW: [`DOI <http://dx.doi.org.proxy2.library.illinois.edu/10.1145/2694344.2694386>`__]
+  :WWW: [`DOI <http://dx.doi.org/10.1145/2694344.2694386>`__]
 
 .. topic:: "Understanding Integer Overflow in C/C++"
 
