@@ -108,3 +108,7 @@ code {
 .field-name {
   padding-right: 10px;
 }
+
+dd {
+  margin-left: 20px;
+}
