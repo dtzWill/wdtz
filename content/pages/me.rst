@@ -16,6 +16,7 @@ Research Interests
 * Compiler-based security techniques
 * Virtualization Technologies
 * Program Analysis (esp C/C++)
+* Operating System Design
 
 Publications
 ------------
