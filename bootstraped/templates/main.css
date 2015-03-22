@@ -116,7 +116,7 @@ dd {
 
 ul.tagcloud {
   list-style: none;
-   padding: 0;
+  padding-left: 20px;
 }
 
 ul.tagcloud li {
