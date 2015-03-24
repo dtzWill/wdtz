@@ -44,14 +44,16 @@
 	{% endfor %}
 	
 	<li class="nav-header"><h4><i class="fa fa-lg fa-tags"></i> Tags</h4></li>
-  <ul class="tagcloud">
-	{% for tag in tag_cloud | sort %}
-	<li class="tag-{{ tag.1 }}">
-		<a href="{{ SITEURL }}/{{ tag.0.url }}">
-        {{ tag.0 }}
-		</a>
+	<li>
+		<ul class="tagcloud">
+			{% for tag in tag_cloud | sort %}
+			<li class="tag-{{ tag.1 }}">
+				<a href="{{ SITEURL }}/{{ tag.0.url }}">
+					{{ tag.0 }}
+				</a>
+			</li>
+			{% endfor %}
+		</ul>
 	</li>
-	{% endfor %}
-  </ul>
 </ul>
 {% endif %}
