@@ -27,4 +27,4 @@ References
 .. target-notes::
 
 .. _Secure Virtual Architecture: http://sva.cs.illinois.edu/
-.. _CHILI Homepage: http://safecode.cs.illinois.edu/chili/
+.. _CHILI Homepage: http://chili.cs.illinois.edu/
