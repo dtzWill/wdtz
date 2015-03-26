@@ -29,6 +29,11 @@ def add_figure_wrappers(content):
             wrap = soup.new_tag('div')
             wrap['class']="figure-wrapper"
 
+            imglink = soup.new_tag('a')
+            img = div.find('img')
+            imglink['href'] = img['src']
+            imglink.append(img.replace_with(imglink))
+
             # Replace with wrapper,
             # and put figure inside (append)
             wrap.append(div.replace_with(wrap))
