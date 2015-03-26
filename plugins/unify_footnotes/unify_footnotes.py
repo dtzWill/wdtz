@@ -42,7 +42,8 @@ def unify_footnotes(content):
     for t in footnote_tables:
         # Gather information we want from the original entry
         f_id = t['id']
-        f_label = t.find('a', class_='fn-backref')
+        f_label = t.find('td', class_='label')
+        f_backrefs = t.find_all('a', class_='fn-backref')
         f_link = t.find('a', class_='reference')
 
         # For styling purposes (eek) make each footnote its own table for now.
@@ -51,15 +52,54 @@ def unify_footnotes(content):
 
         row = soup.new_tag('tr')
 
+        # Canonicalize label text regardless of backref count
+        label_text = f_label.text.strip('[]')
+        label_text = '[' + label_text + ']'
+
+        refs = soup.new_tag('td')
+        refs['class'] = 'fn-backrefs'
+
+        backref_text = '↩'
+        # If single backref, caret is link to in-text location
+        if len(f_backrefs) == 1:
+            backref = f_backrefs[0]
+            ref = soup.new_tag('a')
+            ref['href'] = backref['href']
+            ref['class'] = 'fn-backref'
+            ref.append(backref_text)
+
+            refs.append(ref)
+        else:
+            refs.append(backref_text)
+
+            # Add backrefs after
+            ref_list = soup.new_tag('span')
+            ref_list['class'] = 'fn-backref-list'
+            ref_list.append(' (')
+            for idx,backref in enumerate(f_backrefs):
+                ref = soup.new_tag('a')
+                ref['href'] = backref['href']
+                ref['class'] = 'fn-backref'
+                ref.append(str(idx+1))
+
+                ref_list.append(ref)
+                if (idx+1 != len(f_backrefs)):
+                    ref_list.append(", ")
+            ref_list.append(')')
+
+            refs.append(ref_list)
+
         label = soup.new_tag('td')
         label['class']='label'
-        label.append(f_label)
+        label.append(label_text)
 
         link = soup.new_tag('td')
         link.append(f_link)
 
         row.append(soup.new_string('\n\t'))
         row.append(label)
+        row.append(soup.new_string('\n\t'))
+        row.append(refs)
         row.append(soup.new_string('\n\t'))
         row.append(link)
         row.append(soup.new_string('\n'))

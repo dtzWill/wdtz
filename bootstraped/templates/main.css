@@ -16,6 +16,19 @@ body {
   margin-right: 10px;
 }
 
+td.label {
+  margin-right: 0px;
+}
+
+td.fn-backrefs {
+  padding-right: 5px;
+}
+
+.fn-backref-list {
+  vertical-align: super;
+  font-size: smaller;
+}
+
 footer {
   background: inherit;
   background-image: none;
