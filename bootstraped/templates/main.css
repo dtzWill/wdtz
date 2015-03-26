@@ -22,6 +22,7 @@ td.label {
 
 td.fn-backrefs {
   padding-right: 5px;
+  vertical-align: baseline;
 }
 
 .fn-backref-list {
