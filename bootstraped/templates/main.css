@@ -56,12 +56,17 @@ h4 a {
 
 .figure {
   display: inline-block;
+  background: black;
   border: 1px solid #bbb;
   border-radius: 3px;
   padding: 4px;
   margin: 0 1em 1em 0;
   box-shadow: 4px 4px 4px 0px rgba(128, 128, 128, 0.5);
   max-width: 100%;
+}
+
+.figure .caption {
+  border-top: 1px solid #222;
 }
 
 .figure img {
