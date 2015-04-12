@@ -26,14 +26,14 @@ Publications
   :Authors: Nathan Dautenhahn, Theodoros Kasampalis, Will Dietz, John Criswell, Vikram Adve
   :Published: Proc. of the 2015 International Conference on Architectural Support for Programming Languages and Operating Systems (`ASPLOS'15`_)
   :Where: Istanbul, Turkey
-  :WWW: [`PDF <http://wdtz.org/files/asplos200-dautenhahn.pdf>`__] [`DOI <http://dx.doi.org/10.1145/2694344.2694386>`__]
+  :Links: [`WWW <http://nestedkernel.org/>`__] [`PDF <http://wdtz.org/files/asplos200-dautenhahn.pdf>`__] [`DOI <http://dx.doi.org/10.1145/2694344.2694386>`__]
 
 .. topic:: "Understanding Integer Overflow in C/C++"
 
   :Authors: Will Dietz, Peng Li, John Regehr, and Vikram Adve
   :Published: Proc. of the 2012 International Conference on Software Engineering (`ICSE'12`_)
   :Where: Zurich, Switzerland
-  :WWW: [`PDF <http://www.cs.utah.edu/~regehr/papers/overflow12.pdf>`__] [`IOC (Integer Overflow Checker)`_] [`LLVM Publication Page`_]
+  :Links: [`PDF <http://www.cs.utah.edu/~regehr/papers/overflow12.pdf>`__] [`IOC (Integer Overflow Checker)`_] [`LLVM Publication Page`_]
   :Other: **Awarded an ACM SIGSOFT Distinguished Paper Award**
 
 
