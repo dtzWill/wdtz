@@ -1,14 +1,17 @@
 Projects
 ########
-:date: 2013-08-18
+:date: 2015-05-31
 
 ----------------------
 
 Research
 ========
 
+`Slipstream <|filename|proj/slipstream.rst>`_
+  Automatic Interprocess Communication Optimization.
+
 `CHILI <|filename|proj/chili.rst>`_
-  Current research initiative with Cornell and Harvard.
+  Research initiative with Cornell and Harvard.
 
 `IOC <|filename|proj/ioc.rst>`_
   Integer Overflow Checker.
