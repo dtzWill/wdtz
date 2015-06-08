@@ -21,7 +21,7 @@ Research Interests
 Publications
 ------------
 
-.. topic:: "Slipstream: Automatic Interprocess Communication"
+.. topic:: "Slipstream: Automatic Interprocess Communication Optimization"
 
   :Authors: Will Dietz, Joshua Cranmer, Nathan Dautenhahn, Vikram Adve
   :Published: Proc. of the 2015 USENIX Annual Technical Conference (`USENIX ATC 15`_)
