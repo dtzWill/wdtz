@@ -26,8 +26,7 @@ Publications
   :Authors: Will Dietz, Joshua Cranmer, Nathan Dautenhahn, Vikram Adve
   :Published: Proc. of the 2015 USENIX Annual Technical Conference (`USENIX ATC 15`_)
   :Where: Santa Clara, CA
-  :Links: [`WWW <http://wdtz.org/slipstream>`__] [`USENIX Page <https://www.usenix.org/conference/atc15/technical-session/presentation/dietz>`__]
-  :Other: To Be Published.
+  :Links: [`WWW <http://wdtz.org/slipstream>`__] [`PDF <https://www.usenix.org/system/files/conference/atc15/atc15-paper-dietz.pdf>`__] [`USENIX Page <https://www.usenix.org/conference/atc15/technical-session/presentation/dietz>`__]
 
 .. topic:: "Nested Kernel: An Operating System Architecture for Intra-Kernel Privilege Separation"
 
