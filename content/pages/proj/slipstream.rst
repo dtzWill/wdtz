@@ -1,25 +1,34 @@
 Slipstream
 ##########
 
-:date: 2015-05-31
+:date: 2015-07-10
 
 :status: hidden
 
 Overview
 --------
 
-Slipstream is a system for automatic interprocess communication optimization.
+Slipstream is a system for automatically optimizing interprocess
+communication between processes residing on the same host.
 
-Coming Soon
------------
+Available Now
+-------------
 
-To be published in `USENIX ATC'15`_.
+`Slipstream source`_
 
-Full source for prototype and evaluation will be posted soon.
+`Slipstream eval scripts`_
+
+
+Publications
+------------
+
+Published in `USENIX ATC'15`_, slides and video will be posted after the conference.
 
 References
 ----------
 
 .. target-notes::
 
-.. _USENIX ATC'15: https://www.usenix.org/conference/atc15
+.. _Slipstream source: http://github.com/dtzWill/ipcopter
+.. _Slipstream eval scripts: http://github.com/jcranmer/ipcopter-scripts
+.. _USENIX ATC'15: https://www.usenix.org/conference/atc15/technical-session/presentation/dietz
