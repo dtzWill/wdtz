@@ -22,6 +22,7 @@ FEED_RSS = None
 # Tag cloud settings
 TAG_CLOUD_STEPS = 4
 TAG_CLOUD_MAX_ITEMS = 100
+TAG_CLOUD_SORTING = 'alphabetically'
 
 THEME_CHANGER = True
 
@@ -79,7 +80,7 @@ TWITTER_USERNAME = "wdtz"
 SUMMARY_END_MARKER = "PELICAN_END_SUMMARY"
 
 PLUGIN_PATHS = ["plugins"]
-PLUGINS = ["neighbors", "wrap_figures", "replace_tt", "summary", "remove_summary_footnotes", "nbsp_footnotes", "optimize_images", "unify_footnotes"]
+PLUGINS = ["neighbors", "wrap_figures", "replace_tt", "summary", "remove_summary_footnotes", "nbsp_footnotes", "optimize_images", "unify_footnotes", "tag_cloud"]
 
 
 # Favicon support
