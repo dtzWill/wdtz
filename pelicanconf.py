@@ -79,6 +79,10 @@ TWITTER_USERNAME = "wdtz"
 
 SUMMARY_END_MARKER = "PELICAN_END_SUMMARY"
 
+LOAD_CONTENT_CACHE = False
+CACHE_CONTENT = False
+DELETE_OUTPUT_DIRECTORY = True
+
 PLUGIN_PATHS = ["plugins"]
 PLUGINS = ["plugin_pipeline", "neighbors", "optimize_images", "tag_cloud"]
 
