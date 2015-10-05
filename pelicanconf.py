@@ -80,8 +80,9 @@ TWITTER_USERNAME = "wdtz"
 SUMMARY_END_MARKER = "PELICAN_END_SUMMARY"
 
 PLUGIN_PATHS = ["plugins"]
-PLUGINS = ["neighbors", "wrap_figures", "replace_tt", "summary", "remove_summary_footnotes", "nbsp_footnotes", "optimize_images", "unify_footnotes", "tag_cloud"]
+PLUGINS = ["plugin_pipeline", "neighbors", "optimize_images", "tag_cloud"]
 
+PLUGIN_PIPELINE = [ "wrap_figures", "replace_tt", "summary", "remove_summary_footnotes", "nbsp_footnotes", "unify_footnotes" ]
 
 # Favicon support
 STATIC_PATHS = [
