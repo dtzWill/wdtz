@@ -23,7 +23,7 @@ def replace_tt(content):
     if content is None:
         return None
 
-    soup = BeautifulSoup(content)
+    soup = BeautifulSoup(content, "lxml")
     soup.html.unwrap()
     soup.body.unwrap()
 
