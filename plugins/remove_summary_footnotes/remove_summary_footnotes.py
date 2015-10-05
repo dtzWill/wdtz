@@ -12,9 +12,8 @@ reference lists (footnote targets) aren't included.
 import logging
 from bs4 import BeautifulSoup
 
-from pelican import signals
-
 logger = logging.getLogger(__name__)
+
 
 def remove_footnotes(content):
     '''
@@ -29,7 +28,7 @@ def remove_footnotes(content):
 
     for ref_footnote in soup.findAll("a", class_="footnote-reference"):
         # Remove the footnote-reference link and the space preceding it
-    
+
         # Example:
         # <a href="...">Actual link</a> <a class="footnote-reference">[1]</a>
 
@@ -37,13 +36,15 @@ def remove_footnotes(content):
         # This should be a 'NavigableString' with a single space.
         prev = ref_footnote.previous_sibling
         if prev.string != " ":
-            raise Exception("Unexpected HTML surrounding summary footnote reference!")
+            raise Exception(
+                "Unexpected HTML surrounding summary footnote reference!")
 
         # If that went well, remove the space and the footnote tag.
-        prev.replace_with("") # can't remove, replace with empty string
-        ref_footnote.decompose() # remove and deconstruct
+        prev.replace_with("")  # can't remove, replace with empty string
+        ref_footnote.decompose()  # remove and deconstruct
 
     return soup.decode()
+
 
 def process(instance):
     '''

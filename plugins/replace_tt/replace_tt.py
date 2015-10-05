@@ -6,15 +6,15 @@ replace_tt
 Plugin to find instances of 'tt' tag and replace with 'code'.
 'tt' is non-standard and deprecated in HTML5.
 
-Presently 'tt' tags are generated for inline code, which will now be 'code' and need styling.
+Presently 'tt' tags are generated for inline code,
+which will now be 'code' and need styling.
 '''
 
 import logging
 from bs4 import BeautifulSoup
 
-from pelican import signals
-
 logger = logging.getLogger(__name__)
+
 
 def replace_tt(content):
     '''
@@ -31,6 +31,7 @@ def replace_tt(content):
         div.name = 'code'
 
     return soup.decode()
+
 
 def process(instance):
     '''

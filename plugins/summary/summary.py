@@ -7,8 +7,7 @@ body of your articles.
 """
 
 from __future__ import unicode_literals
-from pelican import signals
-from pelican.generators import ArticlesGenerator, StaticGenerator, PagesGenerator
+
 
 def initialized(pelican):
     from pelican.settings import DEFAULT_CONFIG
@@ -22,6 +21,7 @@ def initialized(pelican):
         pelican.settings.setdefault('SUMMARY_END_MARKER',
                                     '<!-- PELICAN_END_SUMMARY -->')
 
+
 def extract_summary(instance):
     # if summary is already specified, use it
     # if there is no content, there's nothing to do
@@ -34,7 +34,7 @@ def extract_summary(instance):
         return
 
     begin_marker = instance.settings['SUMMARY_BEGIN_MARKER']
-    end_marker   = instance.settings['SUMMARY_END_MARKER']
+    end_marker = instance.settings['SUMMARY_END_MARKER']
 
     content = instance._content
     begin_summary = -1
@@ -68,6 +68,7 @@ def extract_summary(instance):
     instance._content = content
     instance._summary = summary
     instance.has_summary = True
+
 
 def process(instance):
     extract_summary(instance)

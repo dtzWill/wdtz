@@ -11,8 +11,6 @@ centering and use of display:inline-block.
 import logging
 from bs4 import BeautifulSoup
 
-from pelican import signals
-
 logger = logging.getLogger(__name__)
 
 
@@ -27,7 +25,7 @@ def add_figure_wrappers(content):
     for div in soup.findAll('div'):
         if 'figure' in div['class']:
             wrap = soup.new_tag('div')
-            wrap['class']="figure-wrapper"
+            wrap['class'] = "figure-wrapper"
 
             imglink = soup.new_tag('a')
             img = div.find('img')
@@ -39,6 +37,7 @@ def add_figure_wrappers(content):
             wrap.append(div.replace_with(wrap))
 
     return soup.decode()
+
 
 def process(instance):
     '''

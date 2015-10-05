@@ -10,9 +10,8 @@ and unify them into a single HTML5-compliant block.
 import logging
 from bs4 import BeautifulSoup, NavigableString
 
-from pelican import signals
-
 logger = logging.getLogger(__name__)
+
 
 def unify_footnotes(content):
     '''
@@ -47,8 +46,8 @@ def unify_footnotes(content):
         f_link = t.find('a', class_='reference')
 
         # For styling purposes (eek) make each footnote its own table for now.
-        table = soup.new_tag('table',id=f_id)
-        table['class']='footnote'
+        table = soup.new_tag('table', id=f_id)
+        table['class'] = 'footnote'
 
         row = soup.new_tag('tr')
 
@@ -76,7 +75,7 @@ def unify_footnotes(content):
             ref_list = soup.new_tag('span')
             ref_list['class'] = 'fn-backref-list'
             ref_list.append(' (')
-            for idx,backref in enumerate(f_backrefs):
+            for idx, backref in enumerate(f_backrefs):
                 ref = soup.new_tag('a')
                 ref['href'] = backref['href']
                 ref['class'] = 'fn-backref'
@@ -90,7 +89,7 @@ def unify_footnotes(content):
             refs.append(ref_list)
 
         label = soup.new_tag('td')
-        label['class']='label'
+        label['class'] = 'label'
         label.append(label_text)
 
         link = soup.new_tag('td')
@@ -119,8 +118,8 @@ def unify_footnotes(content):
 
     footnotes_div.append(soup.new_string('\n'))
 
-
     return soup.decode()
+
 
 def process(instance):
     '''
