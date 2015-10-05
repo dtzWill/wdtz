@@ -129,7 +129,3 @@ def process(instance):
 
     if hasattr(instance, '_content'):
         instance._content = unify_footnotes(instance._content)
-
-
-def register():
-    signals.content_object_init.connect(process)

@@ -13,9 +13,8 @@ non-breaking space to prevent things like this
 import logging
 from bs4 import BeautifulSoup
 
-from pelican import signals
-
 logger = logging.getLogger(__name__)
+
 
 def nbsp_footnotes(content):
     '''
@@ -36,11 +35,13 @@ def nbsp_footnotes(content):
         # This should be a 'NavigableString' with a single space.
         prev = ref_footnote.previous_sibling
         if prev.string != " ":
-            raise Exception("Unexpected HTML surrounding summary footnote reference!")
+            raise Exception(
+                "Unexpected HTML surrounding summary footnote reference!")
 
-        prev.replace_with(u'\xa0') # U+00A0 = nbsp
+        prev.replace_with(u'\xa0')  # U+00A0 = nbsp
 
     return soup.decode()
+
 
 def process(instance):
     '''
@@ -48,8 +49,4 @@ def process(instance):
     '''
 
     if hasattr(instance, '_content'):
-        instance._content= nbsp_footnotes(instance._content)
-
-
-def register():
-    signals.content_object_init.connect(process)
+        instance._content = nbsp_footnotes(instance._content)

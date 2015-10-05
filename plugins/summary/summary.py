@@ -69,22 +69,5 @@ def extract_summary(instance):
     instance._summary = summary
     instance.has_summary = True
 
-
-def run_plugin(generators):
-    for generator in generators:
-        if isinstance(generator, ArticlesGenerator):
-            for article in generator.articles:
-                extract_summary(article)
-        elif isinstance(generator, PagesGenerator):
-            for page in generator.pages:
-                extract_summary(page)
-
-
-def register():
-    signals.initialized.connect(initialized)
-    try:
-        signals.all_generators_finalized.connect(run_plugin)
-    except AttributeError:
-        # NOTE: This results in #314 so shouldn't really be relied on
-        # https://github.com/getpelican/pelican-plugins/issues/314
-        signals.content_object_init.connect(extract_summary)
+def process(instance):
+    extract_summary(instance)

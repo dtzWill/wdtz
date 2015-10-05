@@ -52,7 +52,3 @@ def process(instance):
 
     if hasattr(instance, '_summary'):
         instance._summary = remove_footnotes(instance._summary)
-
-
-def register():
-    signals.content_object_init.connect(process)

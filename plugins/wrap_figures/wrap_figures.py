@@ -40,7 +40,7 @@ def add_figure_wrappers(content):
 
     return soup.decode()
 
-def wrap_figures(instance):
+def process(instance):
     '''
     Wrap figures in another div for css goodness.
     '''
@@ -49,7 +49,3 @@ def wrap_figures(instance):
         instance._content = add_figure_wrappers(instance._content)
         if hasattr(instance, '_summary'):
             instance._summary = add_figure_wrappers(instance._summary)
-
-
-def register():
-    signals.content_object_init.connect(wrap_figures)

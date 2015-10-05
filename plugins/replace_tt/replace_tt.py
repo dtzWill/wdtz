@@ -41,7 +41,3 @@ def process(instance):
         instance._content = replace_tt(instance._content)
     if hasattr(instance, '_summary'):
         instance._summary = replace_tt(instance._summary)
-
-
-def register():
-    signals.content_object_init.connect(process)
