@@ -22,6 +22,7 @@ Anyway, YMMV and such :).
 
 import logging
 import sys
+from itertools import chain
 
 from pelican import signals
 from pelican.generators import ArticlesGenerator, PagesGenerator
@@ -41,10 +42,10 @@ def run_plugins(generators):
         logger.debug('[PP] Pipeline stage: `%s`', stage.__name__)
         for generator in generators:
             if isinstance(generator, ArticlesGenerator):
-                for article in generator.articles:
+                for article in chain(generator.articles, generator.drafts):
                     stage.process(article)
             elif isinstance(generator, PagesGenerator):
-                for page in generator.pages:
+                for page in chain(generator.pages, generator.hidden_pages):
                     stage.process(page)
 
 
