@@ -1,6 +1,6 @@
 
 body {
-  background-image: url("{{ SITEURL }}/theme/images/py-1.png");
+  background-image: url("../images/py-1.png");
 }
 
 #content {
