@@ -4,10 +4,6 @@ IOC Journal Edition: Highlights
 :date: 2015-12-07 15:33
 :tags: integer, academia, undefined, bug
 
-
-As seen in TOSEM Volume 25, Issue 1
------------------------------------
-
 I'm excited to announce the publication of the
 `journal version of "Understanding Integer Overflow in C/C++"`_, appearing
 in `TOSEM Volume 25 Issue 1`_.
