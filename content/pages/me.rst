@@ -21,6 +21,13 @@ Research Interests
 Publications
 ------------
 
+.. topic:: "Understanding Integer Overflow in C/C++"
+
+  :Authors: Will Dietz, Peng Li, John Regehr, and Vikram Adve
+  :Published: ACM Transactions on Software Engineering and Methodology Volume 25 Issue 1, December 2015 (`TOSEM 25 Issue 1`_)
+  :Other: Updated and expanded version of our ICSE'12 paper.
+  :Links: [`DOI <http://dx.doi.org/10.1145/2743019>`__]
+
 .. topic:: "Slipstream: Automatic Interprocess Communication Optimization"
 
   :Authors: Will Dietz, Joshua Cranmer, Nathan Dautenhahn, Vikram Adve
@@ -53,3 +60,4 @@ Publications
 .. _ASPLOS'15: http://asplos15.bilkent.edu.tr/
 .. _ICSE'12: https://www.ifi.uzh.ch/icse2012/
 .. _USENIX ATC 15: https://www.usenix.org/conference/atc15
+.. _TOSEM 25 Issue 1: http://tosem.acm.org/archive.cfm?id=2852270
