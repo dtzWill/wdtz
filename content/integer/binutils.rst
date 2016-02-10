@@ -42,19 +42,19 @@ Steps to reproduce
 2) Obtain clang 3.3 or latest trunk (from your package manager or build) and modify PATH as appropriate.
 3) Configure similar to the following:
 
-.. code-block:: sh
+.. code-block:: console
 
   $ CC=clang CXX=clang++ ./configure --disable-werror --enable-ld=no
 
 4) Build.
 
-.. code-block:: sh
+.. code-block:: console
 
   $ make -j
 
 5) Run the just-built 'as' using the following program from the testsuite:
 
-.. code-block:: sh
+.. code-block:: console
 
   $ valgrind gas/as-new --32 gas/testsuite/gas/i386/intelbad.s
 

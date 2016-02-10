@@ -26,8 +26,8 @@
 .highlight .gr { color: #f6f3e8; text-decoration: underline; background-color: #000000 } /* Generic.Error */
 .highlight .gh { color: #f6f3e8; font-weight: bold; background-color: #000000 } /* Generic.Heading */
 .highlight .gi { color: #f6f3e8; background-color: #000000 } /* Generic.Inserted */
-.highlight .go { color: #070707; background-color: #000000 } /* Generic.Output */
-.highlight .gp { color: #f6f3e8; background-color: #000000 } /* Generic.Prompt */
+.highlight .go { color: #7C7C7C; background-color: #000000 } /* Generic.Output */
+.highlight .gp { color: #6699CC; background-color: #000000 } /* Generic.Prompt */
 .highlight .gs { color: #f6f3e8; background-color: #000000 } /* Generic.Strong */
 .highlight .gu { color: #f6f3e8; font-weight: bold; background-color: #000000 } /* Generic.Subheading */
 .highlight .gt { color: #ffffff; font-weight: bold; background-color: #FF6C60 } /* Generic.Traceback */

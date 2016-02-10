@@ -96,7 +96,7 @@ First, download and build a copy of ecdsatool_.
 This wasn't available as a package for my server's
 distribution, so I built is as follows:
 
-.. code-block:: sh
+.. code-block:: console
 
   $ git clone https://github.com/atheme/ecdsatool.git
   $ cd ecdsatool
@@ -116,7 +116,7 @@ configure later will be able to find and use it.
 
 Next, use ``ecdsatool`` to generate a key pair for SASL use:
 
-.. code-block:: sh
+.. code-block:: console
 
   $ mkdir -p ~/.irssi/certs
   $ ecdsatool keygen ~/.irssi/certs/freenode.pem
@@ -130,7 +130,7 @@ personal preference.
 Next, grab a copy of the ``cap_sasl.pl`` script shipped
 in the ecdsatool repository:
 
-.. code-block:: sh
+.. code-block:: console
 
   $ mkdir -p ~/.irssi/scripts
   $ wget https://raw.githubusercontent.com/atheme/ecdsatool/master/cap_sasl.pl -O ~/.irssi/scripts/cap_sasl.pl
@@ -138,7 +138,7 @@ in the ecdsatool repository:
 Additionally you likely want to have the script loaded when
 irssi starts:
 
-.. code-block:: sh
+.. code-block:: console
 
   $ mkdir -p ~/.irssi/scripts/autorun
   $ ln -s ../cap_sasl.pl ~/.irssi/scripts/autorun/
@@ -149,10 +149,13 @@ irssi starts:
 From within irssi, use the ``/sasl set`` command to indicate
 what username and certificate to use for your IRC network:
 
-.. code-block:: sh
+.. code-block:: console
 
   $ irssi
   ...
+
+.. code-block:: plain
+
   /sasl set freenode username /full/path/to/freenode.pem ECDSA-NIST256P-CHALLENGE
 
 Replacing ``freenode`` with the network name your configured
@@ -161,7 +164,7 @@ the path with a full path to the key pair generated earlier.
 
 Afterwards, be sure to save this information for future use:
 
-.. code-block:: sh
+.. code-block:: plain
 
   /sasl save
 
@@ -181,7 +184,7 @@ associate it with your account.
 
 First, grab the ``pubkey`` from the key pair:
 
-.. code-block:: sh
+.. code-block:: console
 
   $ ecdsatool pubkey ~/.irssi/certs/freenode.pem
 
