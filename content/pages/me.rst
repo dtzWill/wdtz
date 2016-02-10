@@ -26,7 +26,7 @@ Publications
   :Authors: Will Dietz, Peng Li, John Regehr, and Vikram Adve
   :Published: ACM Transactions on Software Engineering and Methodology Volume 25 Issue 1, December 2015 (`TOSEM 25 Issue 1`_)
   :Other: Updated and expanded version of our ICSE'12 paper.
-  :Links: [`DOI <http://dx.doi.org/10.1145/2743019>`__]
+  :Links: [`PDF <http://wdtz.org/files/tosem15.pdf>`__] [`DOI <http://dx.doi.org/10.1145/2743019>`__]
 
 .. topic:: "Slipstream: Automatic Interprocess Communication Optimization"
 
