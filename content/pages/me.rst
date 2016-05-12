@@ -53,7 +53,7 @@ Publications
 
 
 .. _UIUC: http://illinois.edu
-.. _Computer Science: http://cs.uiuc.edu
+.. _Computer Science: http://cs.illinois.edu
 .. _Vikram Adve: http://llvm.cs.illinois.edu/~vadve
 .. _IOC (Integer Overflow Checker): |filename|/pages/proj/ioc.rst
 .. _LLVM Publication Page: http://llvm.org/pubs/2012-06-08-ICSE-UnderstandingIntegerOverflow.html
