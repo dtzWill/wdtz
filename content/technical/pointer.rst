@@ -287,5 +287,5 @@ References
 .. _asan: http://code.google.com/p/address-sanitizer/
 .. _SAFECode: http://safecode.cs.illinois.edu/
 .. _GEP: http://llvm.org/docs/GetElementPtr.html
-.. _ASTVector: http://lists.cs.uiuc.edu/pipermail/cfe-commits/Week-of-Mon-20131028/091878.html
+.. _ASTVector: http://lists.llvm.org/pipermail/cfe-commits/Week-of-Mon-20131028/091816.html
 
