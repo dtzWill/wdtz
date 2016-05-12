@@ -188,7 +188,7 @@ References
 
 .. _Pelican: http://getpelican.com
 .. _Apache: http://httpd.apache.org/
-.. _CDN: http://en.wikipedia.org/wiki/Content_delivery_network
+.. _CDN: https://en.wikipedia.org/wiki/Content_delivery_network
 .. _Bootstrap: http://getbootstrap.com/
 .. _jquery: http://jquery.com/
 .. _Font Awesome: http://fortawesome.github.io/Font-Awesome/

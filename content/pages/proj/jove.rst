@@ -37,5 +37,5 @@ References
 .. target-notes::
 
 .. _SVA: http://sva.cs.illinois.edu/
-.. _VMM: http://en.wikipedia.org/wiki/Hypervisor
+.. _VMM: https://en.wikipedia.org/wiki/Hypervisor
 .. _Poster: http://wdtz.org/files/jove_poster.pdf

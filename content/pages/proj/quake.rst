@@ -34,8 +34,8 @@ References
 
 .. target-notes::
 
-.. _Quake: http://en.wikipedia.org/wiki/Quake
-.. _Slashdot: http://games.slashdot.org/story/10/01/04/1841200/Palm-Pre-and-WebOS-Get-Native-Gaming
-.. _Engadget: http://www.engadget.com/2010/01/03/quake-ported-to-the-pre-webos-3d-gaming-truly-within-reach
+.. _Quake: https://en.wikipedia.org/wiki/Quake_(video_game)
+.. _Slashdot: https://games.slashdot.org/story/10/01/04/1841200/Palm-Pre-and-WebOS-Get-Native-Gaming
+.. _Engadget: https://www.engadget.com/2010/01/03/quake-ported-to-the-pre-webos-3d-gaming-truly-within-reach
 .. _Wiki: http://www.webos-internals.org/wiki/Application:Quake
 .. _Git: http://git.webos-internals.org/games/sdlquake/

@@ -281,11 +281,11 @@ References
 .. target-notes::
 
 .. _freenode: http://freenode.net/
-.. _SASL: http://en.wikipedia.org/wiki/Simple_Authentication_and_Security_Layer
+.. _SASL: https://en.wikipedia.org/wiki/Simple_Authentication_and_Security_Layer
 .. _irssi: http://irssi.org/
 .. _freenode upgraded to Atheme 7.2: http://blog.freenode.net/2014/11/atheme-7-2-and-freenode/
 .. _deprecates DH-BLOWFISH in IRCv3: http://ircv3.atheme.org/documentation/sasl-dh-blowfish
-.. _MITM: http://en.wikipedia.org/wiki/Man-in-the-middle_attack
+.. _MITM: https://en.wikipedia.org/wiki/Man-in-the-middle_attack
 .. _CertFP: https://freenode.net/certfp/
 .. _freenode's requirement of SASL when connecting over Tor: https://freenode.net/irc_servers.shtml#tor
 .. _ecdsatool: https://github.com/atheme/ecdsatool

@@ -27,5 +27,5 @@ References
 ----------
 .. target-notes::
 
-.. _Eucalyptus: http://en.wikipedia.org/wiki/Eucalyptus_%28computing%29
+.. _Eucalyptus: https://en.wikipedia.org/wiki/Eucalyptus_(software)
 .. _GitHub Organization: http://wdtz.org/cs525/
