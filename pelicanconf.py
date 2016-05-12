@@ -52,11 +52,11 @@ DEV_THEMES = [
 # Social widget
 SOCIAL = (
     ('Email', 'mailto:wdietz2@uiuc.edu', 'fa-envelope'),
-    ('Twitter', 'http://twitter.com/wdtz', 'fa-twitter'),
-    ('Github', 'http://github.com/dtzWill', 'fa-github'),
-    ('Facebook', 'http://facebook.com/dtzWill', 'fa-facebook-square'),
+    ('Twitter', 'https://twitter.com/wdtz', 'fa-twitter'),
+    ('Github', 'https://github.com/dtzWill', 'fa-github'),
+    ('Facebook', 'https://facebook.com/dtzWill', 'fa-facebook-square'),
     ('Google-Plus', 'http://wdtz.org/+', 'fa-google-plus'),
-    ('##uiuc on Freenode', 'http://webchat.freenode.net/?channels=%23%23uiuc', 'fa-comment'),)
+    ('##uiuc on Freenode', 'https://webchat.freenode.net/?channels=%23%23uiuc', 'fa-comment'),)
 
 DEFAULT_PAGINATION = 5
 DEFAULT_ORPHANS = 0
