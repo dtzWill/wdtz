@@ -75,7 +75,7 @@
   <div class="collapse navbar-collapse navbar-ex1-collapse">
     <ul class="nav navbar-nav">
       {% if DISPLAY_PAGES_ON_MENU %}
-      {% for p in PAGES %}
+      {% for p in pages %}
         <li {% if p == page %}class="active"{% endif %}>
           <a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a>
         </li>
