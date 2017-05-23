@@ -1,3 +1,4 @@
+# vim: set fileencoding=utf8 :
 '''
 Copyright (c) 2015 Will Dietz
 
