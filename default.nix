@@ -17,7 +17,7 @@ in stdenv.mkDerivation {
 
   src = builtins.filterSource sourceFilter ./.;
 
-  nativeBuildInputs = with python.pkgs; [ pelican lxml typogrify optipng mozjpeg ];
+  nativeBuildInputs = with python3.pkgs; [ pelican lxml typogrify optipng mozjpeg ];
 
   buildPhase = ''
     make clean
