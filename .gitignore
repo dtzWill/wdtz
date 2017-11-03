@@ -1,2 +1,12 @@
 output/*
+output-*/*
 *.py[cod]
+
+
+*~
+,*
+.*.swp
+.*.swo
+
+result
+result-*
