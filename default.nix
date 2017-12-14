@@ -1,6 +1,7 @@
+{ ... } @ args:
 let
   fetchNixpkgs = import ./nix/fetch-nixpkgs.nix;
-  pkgs = import fetchNixpkgs { };
+  pkgs = import fetchNixpkgs args;
 in
   with pkgs;
 let
