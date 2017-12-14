@@ -1,7 +1,9 @@
 
 let
   output = import ./default.nix {};
-  inherit (import <nixpkgs> {}) rsync openssh stdenv;
+  fetchNixpkgs = import ./nix/fetch-nixpkgs.nix;
+  pkgs = import fetchNixpkgs { };
+  inherit (pkgs) rsync openssh stdenv;
 in stdenv.mkDerivation {
   name = "wdtz.org-upload";
   buildInputs = [ rsync openssh ];
