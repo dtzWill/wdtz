@@ -1,14 +1,8 @@
-{ fetchFromGitHub ? (import <nixpkgs> {}).fetchFromGitHub,
-# https://github.com/NixOS/nixpkgs/pull/26030
- nixpkgs ? fetchFromGitHub {
-   owner = "NixOS";
-   repo = "nixpkgs";
-   rev = "330dee016da8b56cba87afa5710a0ec2f8e26372";
-   sha256 = "15h4rjm8gbwyx87z2mb744b97mwyv003hi7armpzm4ys2d4f9zh3";
- }
-}:
-with import nixpkgs {};
-
+let
+  fetchNixpkgs = import ./nix/fetch-nixpkgs.nix;
+  pkgs = import fetchNixpkgs { };
+in
+  with pkgs;
 let
   gitrev = lib.commitIdFromGitRepo ./.git;
   gitshort = builtins.substring 0 7 gitrev;
