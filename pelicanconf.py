@@ -92,9 +92,11 @@ PLUGIN_PIPELINE = [ "wrap_figures", "replace_tt", "summary", "remove_summary_foo
 STATIC_PATHS = [
     'extra/favicon.ico',
     'images',
+    'files',
 ]
 
 EXTRA_PATH_METADATA = {
     'extra/favicon.ico': {'path': 'favicon.ico'},
     'images': {'path': 'images'},
+    'files': {'path': 'files'},
 }
