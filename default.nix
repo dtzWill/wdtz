@@ -1,4 +1,4 @@
-{ src ? fetchGit ./.}:
+{ src ? fetchGit ./., siteURL ? "https://wdtz.org", relativeURLs ? false }:
 let
   fetchNixpkgs = import ./nix/fetch-nixpkgs.nix;
   pkgs = import fetchNixpkgs { };
@@ -20,6 +20,12 @@ in stdenv.mkDerivation {
   src = builtins.filterSource sourceFilter ./.;
 
   nativeBuildInputs = with python3.pkgs; [ pelican lxml typogrify optipng mozjpeg ];
+
+  patchPhase = ''
+    substituteInPlace publishconf.py \
+      --replace "SITEURL = 'https://wdtz.org'" "SITEURL = '${siteURL}'" \
+      --replace "RELATIVE_URLS = False" "RELATIVE_URLS = ${if relativeURLs then "True" else "False"}"
+  '';
 
   buildPhase = ''
     make clean
