@@ -4,6 +4,7 @@ let
   pkgs = import fetchNixpkgs { };
 in
   with pkgs;
+  assert !relativeURLs -> siteURL != null;
 let
   version = src.shortRev;
 
@@ -13,6 +14,7 @@ let
       (type == "directory" && (lib.hasPrefix "output" baseName ||
                                lib.hasPrefix "__pycache__" baseName))
      );
+
 in stdenv.mkDerivation {
   name = "wdtz-${version}";
   inherit version;
@@ -21,9 +23,10 @@ in stdenv.mkDerivation {
 
   nativeBuildInputs = with python3.pkgs; [ pelican lxml typogrify optipng mozjpeg ];
 
+  # TODO: Just properly generate the config instead of patching the existing one
   patchPhase = ''
     substituteInPlace publishconf.py \
-      --replace "SITEURL = 'https://wdtz.org'" "SITEURL = '${siteURL}'" \
+      --replace "SITEURL = 'https://wdtz.org'" "${lib.optionalString (siteURL != null) "SITEURL = '${siteURL}'"}" \
       --replace "RELATIVE_URLS = False" "RELATIVE_URLS = ${if relativeURLs then "True" else "False"}"
   '';
 
