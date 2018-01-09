@@ -1,13 +1,11 @@
-{ ... } @ args:
+{ src ? fetchGit ./.}:
 let
   fetchNixpkgs = import ./nix/fetch-nixpkgs.nix;
-  pkgs = import fetchNixpkgs args;
+  pkgs = import fetchNixpkgs { };
 in
   with pkgs;
 let
-  gitrev = lib.commitIdFromGitRepo ./.git;
-  gitshort = builtins.substring 0 7 gitrev;
-  version = gitshort;
+  version = src.shortRev;
 
   sourceFilter = name: type: let baseName = baseNameOf (toString name); in
     (lib.cleanSourceFilter name type) &&
