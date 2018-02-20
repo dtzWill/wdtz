@@ -27,6 +27,6 @@ References
 
 .. target-notes::
 
-.. _GitHub Organization: http://wdtz.org/cs523/
-.. _Slides: http://wdtz.org/files/523-final-pdf.pdf
+.. _GitHub Organization: https://wdtz.org/cs523
+.. _Slides: https://wdtz.org/files/523-final-pdf.pdf
 .. _Final Report: https://github.com/mozyg/misc/raw/master/final-report/final-report.pdf

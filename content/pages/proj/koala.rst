@@ -28,4 +28,4 @@ References
 .. target-notes::
 
 .. _Eucalyptus: https://en.wikipedia.org/wiki/Eucalyptus_(software)
-.. _GitHub Organization: http://wdtz.org/cs525/
+.. _GitHub Organization: https://wdtz.org/cs525
