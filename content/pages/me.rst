@@ -33,21 +33,21 @@ Publications
   :Authors: Will Dietz, Peng Li, John Regehr, and Vikram Adve
   :Published: ACM Transactions on Software Engineering and Methodology Volume 25 Issue 1, December 2015 (`TOSEM 25 Issue 1`_)
   :Other: Updated and expanded version of our ICSE'12 paper.
-  :Links: [`PDF <http://wdtz.org/files/tosem15.pdf>`__] [`DOI <http://dx.doi.org/10.1145/2743019>`__]
+  :Links: [`PDF <https://wdtz.org/files/tosem15.pdf>`__] [`DOI <http://doi.org/10.1145/2743019>`__]
 
 .. topic:: "Slipstream: Automatic Interprocess Communication Optimization"
 
   :Authors: Will Dietz, Joshua Cranmer, Nathan Dautenhahn, Vikram Adve
   :Published: Proc. of the 2015 USENIX Annual Technical Conference (`USENIX ATC 15`_)
   :Where: Santa Clara, CA
-  :Links: [`WWW <http://wdtz.org/slipstream>`__] [`PDF <https://www.usenix.org/system/files/conference/atc15/atc15-paper-dietz.pdf>`__] [`USENIX Page <https://www.usenix.org/conference/atc15/technical-session/presentation/dietz>`__]
+  :Links: [`WWW <https://wdtz.org/slipstream>`__] [`PDF <https://www.usenix.org/system/files/conference/atc15/atc15-paper-dietz.pdf>`__] [`USENIX Page <https://www.usenix.org/conference/atc15/technical-session/presentation/dietz>`__]
 
 .. topic:: "Nested Kernel: An Operating System Architecture for Intra-Kernel Privilege Separation"
 
   :Authors: Nathan Dautenhahn, Theodoros Kasampalis, Will Dietz, John Criswell, Vikram Adve
   :Published: Proc. of the 2015 International Conference on Architectural Support for Programming Languages and Operating Systems (`ASPLOS'15`_)
   :Where: Istanbul, Turkey
-  :Links: [`WWW <http://nestedkernel.org/>`__] [`PDF <http://wdtz.org/files/asplos200-dautenhahn.pdf>`__] [`DOI <http://dx.doi.org/10.1145/2694344.2694386>`__]
+  :Links: [`WWW <http://nestedkernel.org/>`__] [`PDF <http://wdtz.org/files/asplos200-dautenhahn.pdf>`__] [`DOI <http://doi.org/10.1145/2694344.2694386>`__]
 
 .. topic:: "Understanding Integer Overflow in C/C++"
 
