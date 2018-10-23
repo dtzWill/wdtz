@@ -21,6 +21,13 @@ Research Interests
 Publications
 ------------
 
+.. topic:: "Software Multiplexing: Share Your Libraries and Statically Link Them Too"
+
+   :Authors: Will Dietz and Vikram Adve
+   :Published: Proc. of the 2018 ACM SIGPLAN International Conference on Object-Oriented Programming, Systems, Languages, and Applications (`OOPSLA'18`_)
+   :Where: Boston, Massachusetts
+   :Links: [`PDF <https://wdtz.org/files/oopsla18-allmux-dietz.pdf>`__] [`DOI <https://doi.org/10.1145/3276524>`__]
+
 .. topic:: "Understanding Integer Overflow in C/C++"
 
   :Authors: Will Dietz, Peng Li, John Regehr, and Vikram Adve
@@ -61,3 +68,4 @@ Publications
 .. _ICSE'12: https://www.ifi.uzh.ch/icse2012/
 .. _USENIX ATC 15: https://www.usenix.org/conference/atc15
 .. _TOSEM 25 Issue 1: http://tosem.acm.org/archive.cfm?id=2852270
+.. _OOPSLA'18: https://2018.splashcon.org/track/splash-2018-OOPSLA
