@@ -3,7 +3,6 @@ A few more ALLVM tidbits are now available
 
 :date: 2019-02-04
 :tags: allvm, llvm, research, release
-:status: draft
 
 Posted on the ALLVM github organization,
 the `allvm-meta` repository is now available--
@@ -65,14 +64,26 @@ I'll hopefully find those pieces soon,
 and might not be ready for exploring but it's
 at least in a better place than it was :).
 
+I wrote an email to the ALLVM co-founders
+my advisor Vikram and `Joshua Cranmer`_,
+which is a nice piece of "history"
+and the early excitement of the project!
+
+You'll find it in the allvm-meta repo,
+it describes my goals and status better
+than the summary above.
+
+Here: `ALLVM JIT Status Email`_
 
 References
 ----------
 .. target-notes::
 
+.. _ALLVM JIT Status Email: https://raw.githubusercontent.com/allvm/allvm-meta/master/bsd_kernel/ALLVM-Status-update
 .. _allvm-meta: https://github.com/allvm/allvm-meta
 .. _Richard Wei: https://twitter.com/rxwei
 .. _fun BSOD: {filename}../technical/kernel_wut.rst
 .. _ALLVM website: http://allvm.org
 .. _ALLVM GitHub Organization: https://github.com/allvm
 .. _hydra: https://nixos.org/hydra
+.. _Joshua Cranmer: http://quetzalcoatal.blogspot.com/
