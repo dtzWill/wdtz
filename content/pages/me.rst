@@ -54,7 +54,7 @@ Publications
   :Authors: Will Dietz, Peng Li, John Regehr, and Vikram Adve
   :Published: Proc. of the 2012 International Conference on Software Engineering (`ICSE'12`_)
   :Where: Zurich, Switzerland
-  :Links: [`PDF <http://www.cs.utah.edu/~regehr/papers/overflow12.pdf>`__] [`IOC (Integer Overflow Checker)`_] [`LLVM Publication Page`_]
+  :Links: [`PDF <http://www.cs.utah.edu/~regehr/papers/overflow12.pdf>`__] [`IOC (Integer Overflow Checker)`_] [`LLVM Publication Page`_] [`Slides <https://wdtz.org/files/icse2012.pptx>`__]
   :Other: **Awarded an ACM SIGSOFT Distinguished Paper Award**
 
 
