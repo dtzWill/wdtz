@@ -79,11 +79,11 @@ References
 ----------
 .. target-notes::
 
-.. _ALLVM JIT Status Email: https://raw.githubusercontent.com/allvm/allvm-meta/master/bsd_kernel/ALLVM-Status-update
 .. _allvm-meta: https://github.com/allvm/allvm-meta
 .. _Richard Wei: https://twitter.com/rxwei
-.. _fun BSOD: {filename}../technical/kernel_wut.rst
 .. _ALLVM website: http://allvm.org
 .. _ALLVM GitHub Organization: https://github.com/allvm
 .. _hydra: https://nixos.org/hydra
+.. _fun BSOD: {filename}../technical/kernel_wut.rst
 .. _Joshua Cranmer: http://quetzalcoatal.blogspot.com/
+.. _ALLVM JIT Status Email: https://raw.githubusercontent.com/allvm/allvm-meta/master/bsd_kernel/ALLVM-Status-update
