@@ -1,7 +1,7 @@
 A few more ALLVM tidbits are now available
 ###########################################
 
-:date: 2019-02-04
+:date: 2019-02-04 19:00
 :tags: allvm, llvm, research, release
 
 Posted on the ALLVM github organization,

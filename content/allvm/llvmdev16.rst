@@ -1,9 +1,8 @@
 "Shipping Software as LLVM IR" @ LLVM Developer's Meeting 2016
 ##############################################################
 
-:date: 2018-10-28
+:date: 2019-02-04 21:06
 :tags: allvm, llvm, research, adventure, slides
-:status: draft
 
 Around two years ago I attended the 2016 LLVM Developer's Meeting
 and led a "Birds of a Feather" (BoF) discussion on the topic
