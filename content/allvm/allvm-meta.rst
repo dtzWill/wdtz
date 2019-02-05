@@ -5,7 +5,7 @@ A few more ALLVM tidbits are now available
 :tags: allvm, llvm, research, release
 
 Posted on the ALLVM github organization,
-the `allvm-meta` repository is now available--
+the `allvm-meta`_ repository is now available--
 and because naming is hard it ended up being
 the repository with perhaps the least "meta" content.
 
