@@ -20,7 +20,6 @@ PELICAN_END_SUMMARY
 Slides
 ------
 The `slides`_ worked well, and I should have posted them long ago.
-Sli.do
 
 Thanks
 -------
