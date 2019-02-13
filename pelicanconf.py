@@ -55,7 +55,7 @@ SOCIAL = (
     ('Mastodon', 'https://mastodon.social/wdtz', 'fab fa-mastodon'),
     ('Twitter', 'https://twitter.com/wdtz', 'fab fa-twitter'),
     ('Github', 'https://github.com/dtzWill', 'fab fa-github'),
-    ('#allvm on OFTC' 'https://riot.im/app/#/room/#_oftc_#allvm:matrix.org', 'fas fa-comment'),)
+    ('#allvm on OFTC', 'https://riot.im/app/#/room/#_oftc_#allvm:matrix.org', 'fas fa-comment'),)
 
 DEFAULT_PAGINATION = 5
 DEFAULT_ORPHANS = 0
