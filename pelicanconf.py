@@ -55,9 +55,7 @@ SOCIAL = (
     ('Mastodon', 'https://mastodon.social/wdtz', 'fab fa-mastodon'),
     ('Twitter', 'https://twitter.com/wdtz', 'fab fa-twitter'),
     ('Github', 'https://github.com/dtzWill', 'fab fa-github'),
-    #('Facebook', 'https://facebook.com/dtzWill', 'fa-facebook-square'),
-    #('Google-Plus', 'http://wdtz.org/+', 'fa-google-plus'),
-    ('##uiuc on Freenode', 'https://webchat.freenode.net/?channels=%23%23uiuc', 'fas fa-comment'),)
+    ('#allvm on OFTC' 'https://riot.im/app/#/room/#_oftc_#allvm:matrix.org', 'fas fa-comment'),)
 
 DEFAULT_PAGINATION = 5
 DEFAULT_ORPHANS = 0
