@@ -31,6 +31,12 @@
     <li><a href="{{ link }}"><i class="{{ icon }} fa-lg fa-fw"></i> {{ name }}</a></li>
 		{% endfor %}
 	{% endif %}
+	{% if ACADEMIC %}
+	<li class="nav-header"><h4><i class="fa fa-lg fa-fw fa-book-open"></i> Academic</h4></li>
+		{% for name, link, icon in ACADEMIC %}
+    <li><a href="{{ link }}"><i class="{{ icon }} ai-lg ai-fw"></i> {{ name }}</a></li>
+		{% endfor %}
+	{% endif %}
 	
 	<li class="nav-header"><h4><i class="fa fa-lg fa-fw fa-folder"></i> Categories</h4></li>
 	

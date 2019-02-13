@@ -55,8 +55,12 @@ SOCIAL = (
     ('Mastodon', 'https://mastodon.social/@wdtz', 'fab fa-mastodon'),
     ('Twitter', 'https://twitter.com/wdtz', 'fab fa-twitter'),
     ('Github', 'https://github.com/dtzWill', 'fab fa-github'),
-    ('#allvm on OFTC', 'https://riot.im/app/#/room/#_oftc_#allvm:matrix.org', 'fas fa-comment'),
-    ('Scholar', 'https://scholar.google.com/citations?user=DIww2AMAAAAJ&hl=en', 'ai ai-google-scholar'),)
+    ('#allvm on OFTC', 'https://riot.im/app/#/room/#_oftc_#allvm:matrix.org', 'fas fa-comment'),)
+
+ACADEMIC = (
+    ('Google Scholar', 'https://scholar.google.com/citations?user=DIww2AMAAAAJ&hl=en', 'ai ai-google-scholar'),
+    ('ResearchGate', 'https://www.researchgate.net/profile/Will_Dietz', 'ai ai-researchgate'),
+    ('ORCID', 'https://orcid.org/0000-0001-7004-2343', 'ai ai-orcid'),)
 
 DEFAULT_PAGINATION = 5
 DEFAULT_ORPHANS = 0
