@@ -55,7 +55,8 @@ SOCIAL = (
     ('Mastodon', 'https://mastodon.social/@wdtz', 'fab fa-mastodon'),
     ('Twitter', 'https://twitter.com/wdtz', 'fab fa-twitter'),
     ('Github', 'https://github.com/dtzWill', 'fab fa-github'),
-    ('#allvm on OFTC', 'https://riot.im/app/#/room/#_oftc_#allvm:matrix.org', 'fas fa-comment'),)
+    ('#allvm on OFTC', 'https://riot.im/app/#/room/#_oftc_#allvm:matrix.org', 'fas fa-comment'),
+    ('Scholar', 'https://scholar.google.com/citations?user=DIww2AMAAAAJ&hl=en', 'ai ai-google-scholar'),)
 
 DEFAULT_PAGINATION = 5
 DEFAULT_ORPHANS = 0
@@ -91,9 +92,11 @@ PLUGIN_PIPELINE = [ "wrap_figures", "replace_tt", "summary", "remove_summary_foo
 STATIC_PATHS = [
     'extra/favicon.ico',
     'images',
+    'academicons'
 ]
 
 EXTRA_PATH_METADATA = {
     'extra/favicon.ico': {'path': 'favicon.ico'},
     'images': {'path': 'images'},
+    'academicons': {'path': 'academicons'}
 }
