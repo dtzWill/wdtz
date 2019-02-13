@@ -52,9 +52,9 @@ DEV_THEMES = [
 # Social widget
 SOCIAL = (
     ('Email', 'mailto:wdietz2@uiuc.edu', 'fa-envelope'),
-    ('Mastodon', 'https://mastodon.social/wdtz', 'fa-mastodon'),
-    ('Twitter', 'https://twitter.com/wdtz', 'fa-twitter'),
-    ('Github', 'https://github.com/dtzWill', 'fa-github'),
+    ('Mastodon', 'https://mastodon.social/wdtz', 'fab fa-mastodon'),
+    ('Twitter', 'https://twitter.com/wdtz', 'fab fa-twitter'),
+    ('Github', 'https://github.com/dtzWill', 'fab fa-github'),
     #('Facebook', 'https://facebook.com/dtzWill', 'fa-facebook-square'),
     #('Google-Plus', 'http://wdtz.org/+', 'fa-google-plus'),
     ('##uiuc on Freenode', 'https://webchat.freenode.net/?channels=%23%23uiuc', 'fa-comment'),)
