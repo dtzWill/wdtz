@@ -150,3 +150,8 @@ li.tag-3 {
 li.tag-4 {
   font-size: 90%;
 }
+
+/* strikethrough css class */
+.strike {
+  text-decoration: line-through;
+}
