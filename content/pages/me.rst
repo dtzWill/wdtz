@@ -4,7 +4,7 @@ About
 :date: 2018-10-22
 :slug: about
 
-I'm a Ph.D student at UIUC_, studying `Computer Science`_ under `Vikram Adve`_ with high-level interests of Compilers and Systems.
+I a recent graduate with a Ph.D in `Computer Science`_ from UIUC_, where I worked under `Vikram Adve`_ with high-level interests of Compilers and Systems.
 
 Research Interests
 ------------------
