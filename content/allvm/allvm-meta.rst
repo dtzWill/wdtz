@@ -58,7 +58,7 @@ for the FreeBSD kernel and successfully codegen the result.
 
 It couldn't quite execute the result, although I THINK that
 was largely a matter of rejiggering a number of things to
-pivot into it gracefully--  not because the code was wrong.
+pivot into it gracefully-- not because the code was wrong.
 
 I'll hopefully find those pieces soon,
 and might not be ready for exploring but it's
