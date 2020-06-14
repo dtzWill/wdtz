@@ -18,7 +18,7 @@ Recognition
 
 Mentioned on news sites such as Slashdot_ and Engadget_.
 
-The youtube videes there are of an early beta, unfortunately they weren't updated when a stable release was made.
+The youtube videos there are of an early beta, unfortunately they weren't updated when a stable release was made.
 
 Links
 -----
