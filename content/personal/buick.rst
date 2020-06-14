@@ -53,7 +53,7 @@ the return trip.  As always, it served us well.
 The Last Days
 -------------
 
-Other than a minor altenator replacement a few
+Other than a minor alternator replacement a few
 years ago, Buick always hid its age well.
 However, recently it started to show signs
 that its time has come:
