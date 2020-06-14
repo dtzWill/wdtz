@@ -60,7 +60,7 @@ that its time has come:
 
 * Driver-side door doesn't close properly
 * Repair shop borked R12->R134A upgrade, killing A/C
-* Blinker unit broken, apparently non-trivially to fix (??)
+* Blinker unit broken, apparently non-trivial to fix (??)
 * Large piece of undercarriage fell off in WI somewhere
 * Rear-view mirror fell off
 * Original hubcaps stolen, attempted to steal car (lots of interior damage)
