@@ -51,7 +51,7 @@ DEV_THEMES = [
 
 # Social widget
 SOCIAL = (
-    ('Email', 'mailto:wdietz2@uiuc.edu', 'fas fa-envelope'),
+    ('Email', 'mailto:w@wdtz.org', 'fas fa-envelope'),
     ('Mastodon', 'https://mastodon.social/@wdtz', 'fab fa-mastodon'),
     ('Twitter', 'https://twitter.com/wdtz', 'fab fa-twitter'),
     ('Github', 'https://github.com/dtzWill', 'fab fa-github'),
