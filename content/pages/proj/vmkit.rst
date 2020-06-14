@@ -10,7 +10,7 @@ Overview
 
 `VMKit`_ is a :abbr:`VM (Virtual Machine)` substrate built on LLVM with functional Java VM and has been used
 for CLI, Python, and R.  For improved compatibility and to learn the inner
-workings of a a language runtime, I ported VMKit to optionally be built
+workings of a language runtime, I ported VMKit to optionally be built
 with OpenJDK instead of GNU Classpath.
 
 Status
