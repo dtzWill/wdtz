@@ -7,8 +7,8 @@ JOVE
 Overview
 --------
 
-:abbr:`JOVE (JIT Compilation of the Linux Kernel in a Virtualized Environment)`
-is a project that enhances SVA_ to JIT compile
+JOVE (JIT Compilation of the Linux Kernel in a Virtualized
+Environment) is a project that enhances SVA_ to JIT compile
 the targeted kernel to remove the kernel bytecode itself
 from the trusted computing base.  The SVA compiler
 instruments the kernel to ensure its safety and that it only
