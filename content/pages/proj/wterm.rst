@@ -27,12 +27,12 @@ References
 .. _Preware: http://preware.org
 .. _GitHub: https://github.com/RyanHope/wTerm
 
-.. |htop| image:: /images/wterm-htop.png
+.. |htop| image:: {filename}/images/wterm-htop.png
    :width: 300px
    :alt: htop in wterm
-   :target: /images/wterm-htop.png
+   :target: {filename}/images/wterm-htop.png
 
-.. |exhibition| image:: /images/wterm-exhibition.png
+.. |exhibition| image:: {filename}/images/wterm-exhibition.png
    :width: 300px
    :alt: cmatrix as Touchpad exhibition
-   :target: /images/wterm-exhibition.png
+   :target: {filename}/images/wterm-exhibition.png
