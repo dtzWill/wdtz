@@ -4,7 +4,7 @@ Quake
 :date: 2013-08-18
 :status: hidden
 
-.. image:: http://www.webos-internals.org/images/9/96/Quake_icon3_copy.png
+.. image:: /images/Quake_icon3_copy.png
   :width: 100px
   :alt: WebOS Quake Logo
 
