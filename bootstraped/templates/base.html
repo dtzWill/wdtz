@@ -123,6 +123,12 @@
       {% include 'sidebar.html' %}
     </div>
   </div>
+  <footer class="row text-center">
+    {% set article_list = (all_articles|default(articles)) %}
+    {% set YEAR_LAST = article_list[0].date.year %}
+    {% set YEAR_FIRST = article_list[-1].date.year %}
+    <i>Where there's a Will there's a way</i> | Copyright &copy; {{ YEAR_FIRST }}-{{ YEAR_LAST }} {{ AUTHOR }}
+  </footer>
 </div>
 
   <!-- JS Libraries to Load -->
@@ -197,11 +203,5 @@ $(window).load(function () {
   </script>
   {% endif %}
 
-<footer class="navbar navbar-fixed-bottom text-center">
-  {% set article_list = (all_articles|default(articles)) %}
-  {% set YEAR_LAST = article_list[0].date.year %}
-  {% set YEAR_FIRST = article_list[-1].date.year %}
-  <i>Where there's a Will there's a way</i> | Copyright &copy; {{ YEAR_FIRST }}-{{ YEAR_LAST }} {{ AUTHOR }}
-</footer>
 </body>
 </html>

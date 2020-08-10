@@ -5,7 +5,6 @@ body {
 
 #content {
   padding-top: 60px;
-  padding-bottom: 40px;
   font-size: 16px;
   font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
@@ -28,12 +27,6 @@ td.fn-backrefs {
 .fn-backref-list {
   vertical-align: super;
   font-size: smaller;
-}
-
-footer {
-  background: inherit;
-  background-image: none;
-  min-height: 0px!important;
 }
 
 .sidebar {
