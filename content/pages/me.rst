@@ -26,7 +26,7 @@ Publications
 
    :Authors: Will Dietz
    :Published: Ph.D. Dissertation, UIUC, 2020
-   :Links: [`PDF <https://www.ideals.illinois.edu/bitstream/handle/2142/107994/DIETZ-DISSERTATION-2020.pdf?sequence=1&isAllowed=y>`__] [`IDEALS <http://hdl.handle.net/2142/107994>`__]
+   :Links: [`IDEALS <http://hdl.handle.net/2142/107994>`__] [`PDF <https://www.ideals.illinois.edu/bitstream/handle/2142/107994/DIETZ-DISSERTATION-2020.pdf?sequence=1&isAllowed=y>`__] 
 
 .. topic:: "Software Multiplexing: Share Your Libraries and Statically Link Them Too"
 
