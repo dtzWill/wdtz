@@ -22,6 +22,12 @@ Research Interests
 Publications
 ------------
 
+.. topic:: "Aligning Intent and Behavior in Software Systems: How Programs Communicate & their Distribution and Organization"
+
+   :Authors: Will Dietz
+   :Published: Ph.D. Dissertation, UIUC, 2020
+   :Links: [`PDF <https://www.ideals.illinois.edu/bitstream/handle/2142/107994/DIETZ-DISSERTATION-2020.pdf?sequence=1&isAllowed=y>`__] [`IDEALS <http://hdl.handle.net/2142/107994>`__]
+
 .. topic:: "Software Multiplexing: Share Your Libraries and Statically Link Them Too"
 
    :Authors: Will Dietz and Vikram Adve
