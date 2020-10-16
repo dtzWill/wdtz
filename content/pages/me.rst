@@ -5,7 +5,7 @@ About
 :slug: about
 
 I'm a recent graduate with a Ph.D. in `Computer Science`_ from UIUC_,
-where I worked under `Vikram Adve`_ with high-level interests of Compilers and Systems.
+where I worked with `Vikram Adve`_ on Compilers and Systems.
 
 Research Interests
 ------------------
