@@ -22,6 +22,12 @@ Research Interests
 Publications
 ------------
 
+.. topic:: "Guided Linking: Dynamic Linking without the Costs"
+
+   :Authors: Sean Bartell, Will Dietz, and Vikram Adve
+   :Published: Proc. of the 2020 ACM SIGPLAN International Conference on Object-Oriented Programming, Systems, Languages, and Applications (`OOPSLA'20`_)
+   :Links: [`DOI <https://doi.org/10.1145/3428213>`__] [`OOPSLA Page <https://2020.splashcon.org/details/splash-2020-oopsla/21/Guided-Linking-Dynamic-Linking-without-the-Costs>`__]
+
 .. topic:: "Aligning Intent and Behavior in Software Systems: How Programs Communicate & their Distribution and Organization"
 
    :Authors: Will Dietz
@@ -76,3 +82,4 @@ Publications
 .. _USENIX ATC 15: https://www.usenix.org/conference/atc15
 .. _TOSEM 25 Issue 1: http://tosem.acm.org/archive.cfm?id=2852270
 .. _OOPSLA'18: https://2018.splashcon.org/track/splash-2018-OOPSLA
+.. _OOPSLA'20: https://2020.splashcon.org/track/splash-2020-OOPSLA
