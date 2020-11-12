@@ -26,6 +26,7 @@ Publications
 
    :Authors: Sean Bartell, Will Dietz, and Vikram Adve
    :Published: Proc. of the 2020 ACM SIGPLAN International Conference on Object-Oriented Programming, Systems, Languages, and Applications (`OOPSLA'20`_)
+   :Where: Virtual
    :Links: [`DOI <https://doi.org/10.1145/3428213>`__] [`OOPSLA Page <https://2020.splashcon.org/details/splash-2020-oopsla/21/Guided-Linking-Dynamic-Linking-without-the-Costs>`__]
 
 .. topic:: "Aligning Intent and Behavior in Software Systems: How Programs Communicate & their Distribution and Organization"
