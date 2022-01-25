@@ -61,7 +61,7 @@ Status
 This issue has been reported_, and is now fixed upstream_
 thanks to the wget developers working with me on the issue.
 While touching that code, also prettified wget's
-``--version``` output in general (see below), and scored
+``--version`` output in general (see below), and scored
 my first (minor) entry on a GNU tool's ChangeLog.  Woo!
 
 Example
